@@ -1,11 +1,6 @@
-# Welcome to your Jupyter Book
+# Introduction to Biomedicine for Engineers
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+This course introduces undergraduates to the types of problems that bioengineers solve and the concepts they apply to solve them. Various types of devices - from genetically engineered bacteria to biosensors - will be discussed, and we will explore the physics and biology necessary to understand and design each device. In addition, students will learn how to work effectively in groups and communicate their results professionally. While this syllabus is meant to accurately describe the course and its content, it may be modified at the instructor’s discretion.
 
 ```{tableofcontents}
 ```
