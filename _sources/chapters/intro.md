@@ -1,0 +1,14 @@
+# An Introduction to Bioengineering
+
+1st Edition by [Iain Clark](https://bioeng.berkeley.edu/faculty/iain-clark)
+
+This text was originally developed for the UC Berkeley course [BioE 10: Introduction to Biomedicine for Engineers][bioe10].
+
+You can [view the source][source] online.
+
+[bioe10]: https://github.com/bioe10/textbook
+[ghpages]: https://github.com/bioe10/textbook/tree/gh-pages
+[source]: https://github.com/bioe10/textbook
+
+The contents of this book are licensed for free consumption under the following license:
+[Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
