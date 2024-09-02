@@ -4,6 +4,8 @@
 
 This text was originally developed for the UC Berkeley course [BioE 10: Introduction to Biomedicine for Engineers][bioe10].
 
+Some sections related to computation have been used or adapted from UC Berkeley's Data8 cours: https://inferentialthinking.com/chapters/intro.html
+
 You can [view the source][source] online.
 
 [bioe10]: https://github.com/bioe10/textbook
