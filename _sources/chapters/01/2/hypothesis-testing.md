@@ -1,3 +1,0 @@
-Hypothesis Testing?
-=================
-
