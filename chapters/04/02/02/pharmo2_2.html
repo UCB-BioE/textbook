@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2.6.1. Arrays &#8212; Introduction to Bioengineering</title>
+    <title>4.2.2. Fick’s Second Law &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -70,13 +70,15 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/02/6/1/Arrays';</script>
-    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/02/6/1/Arrays.html" />
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/02/02/pharmo2_2';</script>
+    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/04/02/02/pharmo2_2.html" />
     <link rel="shortcut icon" href="../../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="2.6.2. Ranges" href="../2/Ranges.html" />
-    <link rel="prev" title="2.6. Sequences" href="../Sequences.html" />
+    <link rel="next" title="4.3. Compartmental Model Practice Problems" href="../../03/Compartment_Practice.html" />
+    <link rel="prev" title="4.2.1. Ficks law of diffusion in 1-D" href="../01/pharmo2_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -171,48 +173,48 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="bd-toc-item navbar-nav active">
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../01/what-is-bioengineering.html">1. Bioengineering</a></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../programming-in-python.html">2. Programming</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../1/intro_jupyter.html">2.1. Jupytr and Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../2/Expressions.html">2.2. Expressions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../3/Names.html">2.3. Names</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../4/Calls.html">2.4. Call Expressions</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../5/Data_Types.html">2.5. Data Types</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../5/1/Numbers.html">2.5.1. Numbers</a></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../5/2/Strings.html">2.5.2. Strings</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../5/2/1/String_Methods.html">2.5.2.1. String Methods</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../02/programming-in-python.html">2. Programming</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../02/1/intro_jupyter.html">2.1. Jupytr and Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../02/2/Expressions.html">2.2. Expressions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../02/3/Names.html">2.3. Names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../02/4/Calls.html">2.4. Call Expressions</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02/5/Data_Types.html">2.5. Data Types</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/5/1/Numbers.html">2.5.1. Numbers</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../02/5/2/Strings.html">2.5.2. Strings</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/5/2/1/String_Methods.html">2.5.2.1. String Methods</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../5/3/Comparison.html">2.5.3. Comparisons</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/5/3/Comparison.html">2.5.3. Comparisons</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../Sequences.html">2.6. Sequences</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">2.6.1. Arrays</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../2/Ranges.html">2.6.2. Ranges</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../3/More_on_Arrays.html">2.6.3. More on Arrays</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02/6/Sequences.html">2.6. Sequences</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/6/1/Arrays.html">2.6.1. Arrays</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/6/2/Ranges.html">2.6.2. Ranges</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/6/3/More_on_Arrays.html">2.6.3. More on Arrays</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../7/Introduction_to_Tables.html">2.7. Tables</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../7/1/Tables.html">2.7.5. Tables</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../7/1/1/Sorting_Rows.html">2.7.5.1. Sorting Rows</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/1/2/Selecting_Rows.html">2.7.5.2. Selecting Rows</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/1/3/Example_Population_Trends.html">2.7.5.3. Example: Population Trends</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/1/4/Example_Sex_Ratios.html">2.7.5.4. Example: Sex Ratios</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02/7/Introduction_to_Tables.html">2.7. Tables</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-5"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../02/7/1/Tables.html">2.7.5. Tables</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/1/1/Sorting_Rows.html">2.7.5.1. Sorting Rows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/1/2/Selecting_Rows.html">2.7.5.2. Selecting Rows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/1/3/Example_Population_Trends.html">2.7.5.3. Example: Population Trends</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/1/4/Example_Sex_Ratios.html">2.7.5.4. Example: Sex Ratios</a></li>
 </ul>
 </li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../7/2/Functions_and_Tables.html">2.7.6. Functions and Tables</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../7/2/1/Applying_a_Function_to_a_Column.html">2.7.6.1. Applying Functions to Columns</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/2/2/Classifying_by_One_Variable.html">2.7.6.2. Classifying by One Variable</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/2/3/Cross-Classifying_by_More_than_One_Variable.html">2.7.6.3. Cross-Classifying</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/2/4/Joining_Tables_by_Columns.html">2.7.6.4. Joining Tables by Columns</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../7/2/5/Bike_Sharing_in_the_Bay_Area.html">2.7.6.5. Bike Sharing in the Bay Area</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../02/7/2/Functions_and_Tables.html">2.7.6. Functions and Tables</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-7"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/2/1/Applying_a_Function_to_a_Column.html">2.7.6.1. Applying Functions to Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/2/2/Classifying_by_One_Variable.html">2.7.6.2. Classifying by One Variable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/2/3/Cross-Classifying_by_More_than_One_Variable.html">2.7.6.3. Cross-Classifying</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/2/4/Joining_Tables_by_Columns.html">2.7.6.4. Joining Tables by Columns</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../02/7/2/5/Bike_Sharing_in_the_Bay_Area.html">2.7.6.5. Bike Sharing in the Bay Area</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../8/Visualization.html">2.8. Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../8/1/Visualizing_Categorical_Distributions.html">2.8.1. Categorical Distributions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../8/2/Visualizing_Numerical_Distributions.html">2.8.2. Numerical Distributions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../8/3/Overlaid_Graphs.html">2.8.3. Overlaid Graphs</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../02/8/Visualization.html">2.8. Visualization</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-8"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/8/1/Visualizing_Categorical_Distributions.html">2.8.1. Categorical Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/8/2/Visualizing_Numerical_Distributions.html">2.8.2. Numerical Distributions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../02/8/3/Overlaid_Graphs.html">2.8.3. Overlaid Graphs</a></li>
 </ul>
 </li>
 </ul>
@@ -228,16 +230,16 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../../03/04/dermagraft-modeling.html">3.4. Dermagraft Oxygen Concentration</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../04/Pharmokinetics.html">4. Pharmokinetics</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../04/01/pharmo_intro.html">4.1. Intro to Pharmokinetic Modeling</a></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../04/02/pharmo2.html">4.2. Compartmental Models</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../04/02/01/pharmo2_1.html">4.2.1. Compartment 2.1</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../04/02/02/pharmo2_2.html">4.2.2. Compartment 2.2</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Pharmokinetics.html">4. Pharmokinetics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../01/pharmo_intro.html">4.1. Intro to Pharmokinetic Modeling</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../pharmo2.html">4.2. Compartmental Models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../01/pharmo2_1.html">4.2.1. Compartment 2.1</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.2.2. Compartment 2.2</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../04/03/Compartment_Practice.html">4.3. Practice problems</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../04/03/01/compartment_model_morphine.html">4.3.1. Morphine Metabolism</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../04/03/02/compartment_model_thyroid.html">4.3.2. Iodine Metabolism</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../03/Compartment_Practice.html">4.3. Practice problems</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../03/01/compartment_model_morphine.html">4.3.1. Morphine Metabolism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../03/02/compartment_model_thyroid.html">4.3.2. Iodine Metabolism</a></li>
 </ul>
 </li>
 </ul>
@@ -371,7 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/02/6/1/Arrays.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/04/02/02/pharmo2_2.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -389,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/02/6/1/Arrays.ipynb&branch=main" target="_blank"
+      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/04/02/02/pharmo2_2.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -435,7 +437,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../../_sources/chapters/02/6/1/Arrays.ipynb" target="_blank"
+      <li><a href="../../../../_sources/chapters/04/02/02/pharmo2_2.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -504,9 +506,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -517,19 +517,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Arrays</h1>
+    <h1>Fick’s Second Law</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-arrays">2.6.1.1. Functions on Arrays</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -539,227 +531,80 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell tag_remove-input docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="ficks-second-law">
+<h1><span class="section-number">4.2.2. </span>Fick’s Second Law<a class="headerlink" href="#ficks-second-law" title="Permalink to this heading">#</a></h1>
+<p>Fick’s first law tells us that Flux <span class="math notranslate nohighlight">\(\propto\)</span> concentration gradient. This makes sense - molecules tend to move from high concentrations to low concentrations.</p>
+<p>Imagine a cup full of water. You place a small drop of food coloring in the center of the water and don’t mix. Over time you can watch the food color slowly spreading through the entire cup. If you come back in the morning, the water will be all one (lighter) color. This was due to diffusion, and not due to the movement of the liquid itself (provided you didn’t swirl the cup. If you swirled the cup, you would have been causing a different type of mass transport called <strong>Advection</strong>.</p>
+<p>What we really would like to know is how the concentration changes in our system. We need to perform a mass balance, taking into account all the different fluxes (Js) that enter and exit our control volume. In our case, J comes from diffusion only, but in many other cases, there are other types of processes that move mass, including:</p>
+<ul class="simple">
+<li><p>Advective</p></li>
+<li><p>Electrophoretic</p></li>
+<li><p>Gravitational</p></li>
+<li><p>Osmotic</p></li>
+<li><p>etc</p></li>
+</ul>
+<p>Let’s consider a packet of fluid that has volume <span class="math notranslate nohighlight">\(\Delta x \times \Delta y \times \Delta z\)</span></p>
+<p><img alt="ficks" src="../../../../_images/ficks2.png" /></p>
+<p>The change in mass per unit time can be written as the mass in minus the mass</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}= \text{change mass} =\dot{m}_{in} -\dot{m}_{out}
+\]</div>
+<p>In the control volume, the change in mass is:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}=\frac{\Delta c \times V}{\Delta t} = \frac{\Delta c \Delta x \Delta y \Delta z}{\Delta t}
+\]</div>
+<p>where:</p>
+<ul class="simple">
+<li><p>c is the concentration (molecules per volume, moles/L)</p></li>
+<li><p>t is the time</p></li>
+<li><p>V is the volume = <span class="math notranslate nohighlight">\(\Delta x \Delta y \Delta z\)</span></p></li>
+</ul>
+<p>This is due to the Flux in minus the Flux out:</p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}_{in} -\dot{m}_{out} = J_x \times \text{Area} - J_{x+\Delta x} \times \text{Area}
+\]</div>
+<p>In this case, the Area is the plane perpendicular to the Flux, <span class="math notranslate nohighlight">\(\Delta y \Delta z\)</span></p>
+<div class="math notranslate nohighlight">
+\[
+\dot{m}_{in} -\dot{m}_{out} = (J_x - J_{x+\Delta x})\Delta y \Delta z 
+\]</div>
+<p><span class="math notranslate nohighlight">\(J_{x+\Delta x}\)</span> can be approximated using a Taylor series expansion as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+J_{x+\Delta x}=J_{x}+\frac{d J}{d x} \Delta x+\frac{d^{2} J}{d x^{2}} \Delta x^{2}+\ldots \text{Higher Order Terms}\\
+\end{split}\]</div>
+<p>Let’s set up the entire equation</p>
+<div class="math notranslate nohighlight">
+\[ \frac{\Delta c \Delta x \Delta y \Delta z}{\Delta t} = 
+\left[J_{x}-\left(J_{x}+\frac{d J}{d x} \Delta x+\frac{d^{2} J}{d x^{2}} \Delta x^{2}+\ldots \text{Higher Order Terms}
+\right)\right]\Delta y \Delta z
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{\Delta c}{\Delta t}=-\left[ \frac{d J}{d x} \Delta x+\frac{d J}{d x^{2}} \Delta x^{2}+\ldots \right]
+\]</div>
+<p>The last step is to use the J from Fick’s First law. Plugging</p>
+<div class="math notranslate nohighlight">
+\[
+J=-D \frac{\partial c}{\partial x} 
+\]</div>
+<p>into</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial c}{\partial t} = - \frac{\partial J}{\partial x}
+\]</div>
+<p>gives</p>
+<div class="admonition-flick-s-2-text-nd-law admonition">
+<p class="admonition-title">Flick’s <span class="math notranslate nohighlight">\(2^{\text {nd }}\)</span> Law</p>
+<p>So now we have an expression that tells us the relationship between concentration, time, and distance. We can use this to find the concentration profile in our Dermagratt.</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\partial c}{\partial t}=D\frac{\partial^{2} c}{\partial x^{2}}
+\]</div>
 </div>
-<section class="tex2jax_ignore mathjax_ignore" id="arrays">
-<h1><span class="section-number">2.6.1. </span>Arrays<a class="headerlink" href="#arrays" title="Permalink to this heading">#</a></h1>
-<p>While there are many kinds of collections in Python, we will work primarily with arrays in this class. We’ve already seen that the <code class="docutils literal notranslate"><span class="pre">make_array</span></code> function can be used to create arrays of numbers.</p>
-<p>Arrays can also contain strings or other types of values, but a single array can only contain a single kind of data. (It usually doesn’t make sense to group together unlike data anyway.)  For example:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">english_parts_of_speech</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="s2">&quot;noun&quot;</span><span class="p">,</span> <span class="s2">&quot;pronoun&quot;</span><span class="p">,</span> <span class="s2">&quot;verb&quot;</span><span class="p">,</span> <span class="s2">&quot;adverb&quot;</span><span class="p">,</span> <span class="s2">&quot;adjective&quot;</span><span class="p">,</span> <span class="s2">&quot;conjunction&quot;</span><span class="p">,</span> <span class="s2">&quot;preposition&quot;</span><span class="p">,</span> <span class="s2">&quot;interjection&quot;</span><span class="p">)</span>
-<span class="n">english_parts_of_speech</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;noun&#39;, &#39;pronoun&#39;, &#39;verb&#39;, &#39;adverb&#39;, &#39;adjective&#39;, &#39;conjunction&#39;,
-       &#39;preposition&#39;, &#39;interjection&#39;], dtype=&#39;&lt;U12&#39;)
-</pre></div>
-</div>
-</div>
-</div>
-<p>Returning to the temperature data, we create arrays of average daily <a class="reference external" href="http://berkeleyearth.lbl.gov/auto/Regional/TMAX/Text/global-land-TMAX-Trend.txt">high temperatures</a> for the decades surrounding 1850, 1900, 1950, and 2000.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">baseline_high</span> <span class="o">=</span> <span class="mf">14.48</span>
-<span class="n">highs</span> <span class="o">=</span> <span class="n">make_array</span><span class="p">(</span><span class="n">baseline_high</span> <span class="o">-</span> <span class="mf">0.880</span><span class="p">,</span> 
-                   <span class="n">baseline_high</span> <span class="o">-</span> <span class="mf">0.093</span><span class="p">,</span>
-                   <span class="n">baseline_high</span> <span class="o">+</span> <span class="mf">0.105</span><span class="p">,</span> 
-                   <span class="n">baseline_high</span> <span class="o">+</span> <span class="mf">0.684</span><span class="p">)</span>
-<span class="n">highs</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([13.6  , 14.387, 14.585, 15.164])
-</pre></div>
-</div>
-</div>
-</div>
-<p>Arrays can be used in arithmetic expressions to compute over their contents. When an array is combined with a single number, that number is combined with each element of the array. Therefore, we can convert all of these temperatures to Fahrenheit by writing the familiar conversion formula.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="n">highs</span> <span class="o">+</span> <span class="mi">32</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([56.48  , 57.8966, 58.253 , 59.2952])
-</pre></div>
-</div>
-</div>
-</div>
-<p><img alt="array arithmetic" src="../../../../_images/array_arithmetic.png" /></p>
-<p>Arrays also have <em>methods</em>, which are functions that operate on the array values. The <code class="docutils literal notranslate"><span class="pre">mean</span></code> of a collection of numbers is its average value: the sum divided by the length. Each pair of parentheses in the examples below is part of a call expression; it’s calling a function with no arguments to perform a computation on the array called <code class="docutils literal notranslate"><span class="pre">highs</span></code>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highs</span><span class="o">.</span><span class="n">size</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highs</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>57.736000000000004
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">highs</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>14.434000000000001
-</pre></div>
-</div>
-</div>
-</div>
-<section id="functions-on-arrays">
-<h2><span class="section-number">2.6.1.1. </span>Functions on Arrays<a class="headerlink" href="#functions-on-arrays" title="Permalink to this heading">#</a></h2>
-<p>The <code class="docutils literal notranslate"><span class="pre">numpy</span></code> package, abbreviated <code class="docutils literal notranslate"><span class="pre">np</span></code> in programs, provides Python programmers with convenient and powerful functions for creating and manipulating arrays.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>For example, the <code class="docutils literal notranslate"><span class="pre">diff</span></code> function computes the difference between each adjacent pair of elements in an array. The first element of the <code class="docutils literal notranslate"><span class="pre">diff</span></code> is the second element minus the first.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">highs</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.787, 0.198, 0.579])
-</pre></div>
-</div>
-</div>
-</div>
-<p>The <a class="reference external" href="http://docs.scipy.org/doc/numpy/reference/">full Numpy reference</a> lists these functions exhaustively, but only a small subset are used commonly for data processing applications. These are grouped into different packages within <code class="docutils literal notranslate"><span class="pre">np</span></code>. Learning this vocabulary is an important part of learning the Python language, so refer back to this list often as you work through examples and problems.</p>
-<p>However, you <strong>don’t need to memorize these</strong>.  Use this as a reference.</p>
-<p>Each of these functions takes an array as an argument and returns a single value.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.prod</span></code></p></td>
-<td><p>Multiply all elements together</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.sum</span></code></p></td>
-<td><p>Add all elements together</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.all</span></code></p></td>
-<td><p>Test whether all elements are true values (non-zero numbers are true)</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.any</span></code></p></td>
-<td><p>Test whether any elements are true values (non-zero numbers are true)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.count_nonzero</span></code></p></td>
-<td><p>Count the number of non-zero elements</p></td>
-</tr>
-</tbody>
-</table>
-<p>Each of these functions takes an array as an argument and returns an array of values.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.diff</span></code></p></td>
-<td><p>Difference between adjacent elements</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.round</span></code></p></td>
-<td><p>Round each number to the nearest integer (whole number)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.cumprod</span></code></p></td>
-<td><p>A cumulative product: for each element, multiply all elements so far</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.cumsum</span></code></p></td>
-<td><p>A cumulative sum: for each element, add all elements so far</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.exp</span></code></p></td>
-<td><p>Exponentiate each element</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.log</span></code></p></td>
-<td><p>Take the natural logarithm of each element</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.sqrt</span></code></p></td>
-<td><p>Take the square root of each element</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.sort</span></code></p></td>
-<td><p>Sort the elements</p></td>
-</tr>
-</tbody>
-</table>
-<p>Each of these functions takes an array of strings and returns an array.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
-<th class="head"><p><strong>Description</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.lower</span></code></p></td>
-<td><p>Lowercase each element</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.upper</span></code></p></td>
-<td><p>Uppercase each element</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.strip</span></code></p></td>
-<td><p>Remove spaces at the beginning or end of each element</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.isalpha</span></code></p></td>
-<td><p>Whether each element is only letters (no numbers or symbols)</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.isnumeric</span></code></p></td>
-<td><p>Whether each element is only numeric (no letters)</p></td>
-</tr>
-</tbody>
-</table>
-<p>Each of these functions takes both an array of strings and a <em>search string</em>; each returns an array.</p>
-<table class="colwidths-auto table">
-<thead>
-<tr class="row-odd"><th class="head"><p><strong>Function</strong></p></th>
-<th class="head"><p><strong>Description</strong></p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.count</span></code></p></td>
-<td><p>Count the number of times a search string appears among the elements of an array</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.find</span></code></p></td>
-<td><p>The position within each element that a search string is found first</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.rfind</span></code></p></td>
-<td><p>The position within each element that a search string is found last</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">np.char.startswith</span></code></p></td>
-<td><p>Whether each element starts with the search string</p></td>
-</tr>
-</tbody>
-</table>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -775,7 +620,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/02/6/1"
+            path: "./chapters/04/02/02"
         },
         predefinedOutput: true
     }
@@ -793,20 +638,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../Sequences.html"
+       href="../01/pharmo2_1.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">2.6. </span>Sequences</p>
+        <p class="prev-next-title"><span class="section-number">4.2.1. </span>Ficks law of diffusion in 1-D</p>
       </div>
     </a>
     <a class="right-next"
-       href="../2/Ranges.html"
+       href="../../03/Compartment_Practice.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2.6.2. </span>Ranges</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Compartmental Model Practice Problems</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -816,20 +661,6 @@ document.write(`
             </div>
             
             
-              
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#functions-on-arrays">2.6.1.1. Functions on Arrays</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
               
             
           </div>

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.2.1. Ficks law of diffusion in 1-D &#8212; Introduction to Bioengineering</title>
+    <title>4.3.1. Compartmental model of morphine metabolism &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -72,13 +72,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/02/01/ficks_first';</script>
-    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/04/02/01/ficks_first.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/03/01/compartment_model_morphine';</script>
+    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/04/03/01/compartment_model_morphine.html" />
     <link rel="shortcut icon" href="../../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="4.2.2. Fick’s Second Law" href="../02/ficks2.html" />
-    <link rel="prev" title="4.2. Fick’s Laws" href="../ficks_laws.html" />
+    <link rel="next" title="4.3.2. Compartmental model of iodine transport to the thyroid" href="../02/compartment_model_thyroid.html" />
+    <link rel="prev" title="4.3. Compartmental Model Practice Problems" href="../Compartment_Practice.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -230,19 +230,22 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../../../03/04/dermagraft-modeling.html">3.4. Dermagraft Oxygen Concentration</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../CompartmentalModels.html">4. Compartmental Models</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../01/random_walk.html">4.1. A Random Walk</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../ficks_laws.html">4.2. Ficks Laws</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.2.1. Ficks First Law</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../02/ficks2.html">4.2.2. Ficks Second Law</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../Pharmokinetics.html">4. Pharmokinetics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-11"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../01/pharmo_intro.html">4.1. Intro to Pharmokinetic Modeling</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../02/pharmo2.html">4.2. Compartmental Models</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-12"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../02/01/pharmo2_1.html">4.2.1. Compartment 2.1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../02/02/pharmo2_2.html">4.2.2. Compartment 2.2</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../03/dermagraft-derivation.html">4.3. Diffusion Reaction (Steady State, 1-D)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../04/dermagraft-modeling.html">4.4. Dermagraft Oxygen Concentration</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../Compartment_Practice.html">4.3. Practice problems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">4.3.1. Morphine Metabolism</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../02/compartment_model_thyroid.html">4.3.2. Iodine Metabolism</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../../../20/statistics.html">5. Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/09/Randomness.html">5.1. Randomness</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../20/statistics.html">5. Statistics</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/09/Randomness.html">5.1. Randomness</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/09/1/Conditional_Statements.html">5.1.1. Conditional Statements</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/09/2/Iteration.html">5.1.2. Iteration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/09/3/Simulation.html">5.1.3. Simulation</a></li>
@@ -250,34 +253,34 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../../20/09/5/Finding_Probabilities.html">5.1.5. Finding Probabilities</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/10/Sampling_and_Empirical_Distributions.html">5.2. Sampling and Empirical Distributions</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-15"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/10/Sampling_and_Empirical_Distributions.html">5.2. Sampling and Empirical Distributions</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/10/1/Empirical_Distributions.html">5.2.1. Empirical Distributions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/10/2/Sampling_from_a_Population.html">5.2.2. Sampling from a Population</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/10/3/Empirical_Distribution_of_a_Statistic.html">5.2.3. Empirical Distibution of a Statistic</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/10/4/Random_Sampling_in_Python.html">5.2.4. Random Sampling in Python</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/11/Testing_Hypotheses.html">5.3. Testing Hypotheses</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-16"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/11/Testing_Hypotheses.html">5.3. Testing Hypotheses</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/11/1/Assessing_a_Model.html">5.3.1. Assessing a Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/11/2/Multiple_Categories.html">5.3.2. Multiple Categories</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/11/3/Decisions_and_Uncertainty.html">5.3.3. Decisions and Uncertainty</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/11/4/Error_Probabilities.html">5.3.4. Error Probabilities</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/12/Comparing_Two_Samples.html">5.4. Comparing Two Samples</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-17"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/12/Comparing_Two_Samples.html">5.4. Comparing Two Samples</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/12/1/AB_Testing.html">5.4.1. A/B Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/12/2/Causality.html">5.4.2. Causality</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/12/3/Deflategate.html">5.4.3. Deflategate</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/13/Estimation.html">5.5. Estimation</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-18"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/13/Estimation.html">5.5. Estimation</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/13/1/Percentiles.html">5.5.1. Percentiles</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/13/2/Bootstrap.html">5.5.2. The Bootstrap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/13/3/Confidence_Intervals.html">5.5.3. Confidence Intervals</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/13/4/Using_Confidence_Intervals.html">5.5.4. Using Confidence Intervals</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/14/Why_the_Mean_Matters.html">5.6. Why the Mean Matters</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-19"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/14/Why_the_Mean_Matters.html">5.6. Why the Mean Matters</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/14/1/Properties_of_the_Mean.html">5.6.1. Properties of the Mean</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/14/2/Variability.html">5.6.2. Variability</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/14/3/SD_and_the_Normal_Curve.html">5.6.3. The SD and the Normal Curve</a></li>
@@ -286,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../../20/14/6/Choosing_a_Sample_Size.html">5.6.6. Choosing a Sample Size</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/15/Prediction.html">5.7. Prediction</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-20"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/15/Prediction.html">5.7. Prediction</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/15/1/Correlation.html">5.7.1. Correlation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/15/2/Regression_Line.html">5.7.2. The Regression Line</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/15/3/Method_of_Least_Squares.html">5.7.3. The Method of Least Squares</a></li>
@@ -295,13 +298,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../../20/15/6/Numerical_Diagnostics.html">5.7.6. Numerical Diagnostics</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/16/Inference_for_Regression.html">5.8. Inference for Regression</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-21"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/16/Inference_for_Regression.html">5.8. Inference for Regression</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/16/1/Regression_Model.html">5.8.1. A Regression Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/16/2/Inference_for_the_True_Slope.html">5.8.2. Inference for the True Slope</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/16/3/Prediction_Intervals.html">5.8.3. Prediction Intervals</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/17/Classification.html">5.9. Classification</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-22"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/17/Classification.html">5.9. Classification</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/17/1/Nearest_Neighbors.html">5.9.1. Nearest Neighbors</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/17/2/Training_and_Testing.html">5.9.2. Training and Testing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/17/3/Rows_of_Tables.html">5.9.3. Rows of Tables</a></li>
@@ -310,7 +313,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l3"><a class="reference internal" href="../../../20/17/6/Multiple_Regression.html">5.9.6. Multiple Regression</a></li>
 </ul>
 </li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/18/Updating_Predictions.html">5.10. Updating Predictions</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-23"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../20/18/Updating_Predictions.html">5.10. Updating Predictions</a><input class="toctree-checkbox" id="toctree-checkbox-24" name="toctree-checkbox-24" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-24"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../20/18/1/More_Likely_than_Not_Binary_Classifier.html">5.10.1. A "More Likely Than Not" Binary Classifier</a></li>
 </ul>
 </li>
@@ -370,7 +373,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/04/02/01/ficks_first.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/04/03/01/compartment_model_morphine.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,7 +391,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/04/02/01/ficks_first.ipynb&branch=main" target="_blank"
+      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/04/03/01/compartment_model_morphine.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -434,7 +437,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../../_sources/chapters/04/02/01/ficks_first.ipynb" target="_blank"
+      <li><a href="../../../../_sources/chapters/04/03/01/compartment_model_morphine.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -516,7 +519,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Ficks law of diffusion in 1-D</h1>
+    <h1>Compartmental model of morphine metabolism</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -526,8 +529,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flux">4.2.1.1. Flux</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-due-to-random-movement-of-molecules">4.2.1.2. Flux due to random movement of molecules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.1.1. Central compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-initial-dose">4.3.1.2. Required Initial Dose</a></li>
 </ul>
             </nav>
         </div>
@@ -539,77 +542,79 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ficks-law-of-diffusion-in-1-d">
-<h1><span class="section-number">4.2.1. </span>Ficks law of diffusion in 1-D<a class="headerlink" href="#ficks-law-of-diffusion-in-1-d" title="Permalink to this heading">#</a></h1>
-<section id="flux">
-<h2><span class="section-number">4.2.1.1. </span>Flux<a class="headerlink" href="#flux" title="Permalink to this heading">#</a></h2>
-<p>We are interested in how diffusion causes molecules to move. We therefore are interested in something called <strong>Flux</strong>.  Flux is the molecules (or mass) that pass through the plane in a given amount of time. .</p>
-<p>Imagine a 2D plane. On the left side, there are a certain number of molecules N(x), and on the right side there are a different number of molecules. By random motion, after a certain amount of time, some molecules with cross through the plan, resulting in a net flux.</p>
-<p><img alt="ficks" src="../../../../_images/flux.png" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="compartmental-model-of-morphine-metabolism">
+<h1><span class="section-number">4.3.1. </span>Compartmental model of morphine metabolism<a class="headerlink" href="#compartmental-model-of-morphine-metabolism" title="Permalink to this heading">#</a></h1>
+<p>Credit: Terry Johnson</p>
+<p>A 61 kg patient needs enough morphine to relieve their post-surgical pain during sleep (8 hours). How much morphine should be given to the patient before bed so that the concentration of morphine in their system doesn’t drop below the pain-relieving concentration <span class="math notranslate nohighlight">\(8.2 \times 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>?</p>
+<p>The volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> is approximately 1.0 <span class="math notranslate nohighlight">\(\mathrm{kg} / \mathrm{L}\)</span>, or 61 L (for this 61 kg patient).</p>
+<p>This patient’s clearance rate for morphine <span class="math notranslate nohighlight">\(k=0.351 / \mathrm{hr}\)</span>. Below is the one-compartment model describing this system.</p>
+<section id="central-compartment">
+<h2><span class="section-number">4.3.1.1. </span>Central compartment<a class="headerlink" href="#central-compartment" title="Permalink to this heading">#</a></h2>
+<p><span class="math notranslate nohighlight">\(V_{d}=61 \mathrm{~L}\)</span> Initial dose <span class="math notranslate nohighlight">\(\mathrm{C}_{0}=\)</span> ?</p>
+<p>The rate of change of morphine concentration in the central compartment would be:
+$<span class="math notranslate nohighlight">\(
+\begin{aligned}
+\frac{d c}{d t} &amp; =-k c \\
+\frac{d c}{c} &amp; =-k d t
+\end{aligned}
+\)</span>$</p>
+<p>Integrate both sides to get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{aligned}
+\int \frac{d c}{c} &amp; =-k \int d t \\
+\ln c &amp; =-k t+A
+\end{aligned}
+\end{split}\]</div>
+<p>where A is an integration constant. This is equivalent to:</p>
+<div class="math notranslate nohighlight">
+\[
+\ln c=-k t+\ln A
+\]</div>
+<p>Why can we switch out A for <span class="math notranslate nohighlight">\(\ln A\)</span>? Why did we do that?</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{gathered}
+\ln c-\ln A=-k t \\
+\ln \frac{c}{A}=-k t \\
+c(t)=A e^{-k t}
+\end{gathered}
+\end{split}\]</div>
 </section>
-<section id="flux-due-to-random-movement-of-molecules">
-<h2><span class="section-number">4.2.1.2. </span>Flux due to random movement of molecules<a class="headerlink" href="#flux-due-to-random-movement-of-molecules" title="Permalink to this heading">#</a></h2>
-<p>Let’s denote Flux as “J.” If we assume that the molecules are moving by random motion on each side of the plane, 50% will stay, and 50% will jump. Therefore:</p>
-<div class="math notranslate nohighlight">
-\[
-J =  \left(\frac{ 0.5 N(x) - 0.5 N(x + \Delta x)}{A\Delta t} \right)
-\]</div>
-<p>where:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(N(x)\)</span> is the number of molecules at position x</p></li>
-<li><p><span class="math notranslate nohighlight">\(N(x+\Delta x)\)</span> is the number of molecules at position <span class="math notranslate nohighlight">\(x+\Delta x\)</span></p></li>
-<li><p>t is the time</p></li>
-</ul>
-<p>We can modify this to be in terms of concentration, which has units of molecules per volume. The concentration is given by:</p>
-<div class="math notranslate nohighlight">
-\[
-\text{Concentration} = \frac{\text{molecules}}{\text{volume}} = \frac{N(x)}{A \Delta x}
-\]</div>
-<p>The number of molecules is:</p>
-<div class="math notranslate nohighlight">
-\[
-N(x) = C \cdot A \cdot \Delta x
-\]</div>
-<p>Plugging this in to our equation for flux J</p>
-<div class="math notranslate nohighlight">
-\[
-J = \frac{1}{A} \left( \frac{C(x) A \cdot \Delta x - C(x + \Delta x) A \Delta x}{2 \Delta t} \right)
-\]</div>
-<p>Simplifying, we get:</p>
-<div class="math notranslate nohighlight">
-\[
-J = \frac{\Delta x^{2}}{2 \Delta t} \left( \frac{C(x) - C(x + \Delta x)}{\Delta x} \right)
-\]</div>
-<p>Or alternatively:</p>
-<div class="math notranslate nohighlight">
-\[
-J = -\frac{\Delta x^{2}}{2 \Delta t} \left[ \frac{C(x + \Delta x) - C(x)}{\Delta x} \right]
-\]</div>
-<p>Notice that this is the first derivative of C with respect to x as <span class="math notranslate nohighlight">\(\Delta x\)</span> gets small</p>
-<div class="math notranslate nohighlight">
-\[
-\lim_{\Delta x \to 0}  \frac{C(x + \Delta x) - C(x)}{\Delta x}  = \frac{d C}{d x}
-\]</div>
-<p>…and as <span class="math notranslate nohighlight">\(\Delta t \rightarrow 0\)</span> and <span class="math notranslate nohighlight">\(\Delta x \rightarrow 0\)</span></p>
-<div class="math notranslate nohighlight">
-\[
-\lim_{\Delta x \to 0 , \Delta t \to 0} \frac{\Delta x^{2}}{2 \Delta t}= D 
-\]</div>
-<div class="admonition-fick-s-1st-law admonition">
-<p class="admonition-title">Fick’s 1st Law</p>
-<p>Finally, we arrive at our final equation for flux:</p>
-<div class="math notranslate nohighlight">
-\[
-J = -D \frac{d C}{d x}
-\]</div>
-<p>This is called <strong>Fick’s 1st Law</strong>. It applies to diffusion in a lot of different contexts, and has an equivalent in Heat Transfer.</p>
+<section id="required-initial-dose">
+<h2><span class="section-number">4.3.1.2. </span>Required Initial Dose<a class="headerlink" href="#required-initial-dose" title="Permalink to this heading">#</a></h2>
+<div class="alert alert-info"> 
+QUESTION: How do we calculate the required initial dose of morphine?
 </div>
-<p>D is the Diffusion Constant, which depends on the molecule and fluid it is in.</p>
-<p>What are the units of the Diffusion constant?</p>
+<p>We know two things:</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(t=0, c(t)\)</span> must be <span class="math notranslate nohighlight">\(c_{0}\)</span> (the initial concentration)</p></li>
+<li><p>At <span class="math notranslate nohighlight">\(t=8\)</span> hours, the concentration can be no less than <span class="math notranslate nohighlight">\(8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>.</p></li>
+</ul>
+<p>We use the first to solve for A .
+$<span class="math notranslate nohighlight">\(
+c_{0}=A e^{0}
+\)</span>$</p>
+<p>Which gives us <span class="math notranslate nohighlight">\(\mathrm{A}=c_{0}\)</span> and,
+$<span class="math notranslate nohighlight">\(
+c(t)=c_{0} e^{-k t}
+\)</span>$</p>
+<p>Now, we solve for a <span class="math notranslate nohighlight">\(C_{0}\)</span> that will give us exactly the effective pain-relieving concentration after 8 hours. At this initial dose, the concentration of morphine will just start to become ineffective as the patient wakes up.</p>
 <div class="math notranslate nohighlight">
 \[
-\frac{\text { moles }}{m^{2} \cdot s} \equiv \left(\frac{\text { moles }}{m^{3}} \frac{1}{m}\right)\left(\frac{m^{2}}{s}\right)
+8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}=c_{0} e^{-(0.35 / h r)(8.0 h r)}
 \]</div>
+<p>Solving for <span class="math notranslate nohighlight">\(c_{0}\)</span> gives us a concentration of <span class="math notranslate nohighlight">\(0.134846 \ldots \mathrm{mg} / \mathrm{L}\)</span> (accounting for sig figs in the last step).</p>
+<p>To achieve this concentration in the body, one must inject <span class="math notranslate nohighlight">\((0.134846 \ldots \mathrm{mg} / \mathrm{L})(61 \mathrm{~L})\)</span>, or 8.2 mg. In reality, since we’ve made several simplifying assumptions in our compartmental model, I would interpret this as “somewhere around 8 mg.”</p>
+<p>QUESTION: Before giving a patient this dose, what else should we consider?</p>
+<p>The typical dose for morphine is <span class="math notranslate nohighlight">\(10-30 \mathrm{mg}\)</span>. Overdose occurs between 60 mg (hypersensitive) and 200 mg (typical), though it can be much higher for those who have been using morphine regularly.</p>
+<p>QUESTION: An 80 kg patient comes in with the same problem - you’re asked to calculate a minimum effective dose. What do you need to do differently?</p>
+<p>For an 80 kg patient, the volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> will be 80 L .</p>
+<p>If the clearance rate is proportional to the surface area of the patient, then,
+$<span class="math notranslate nohighlight">\(
+\frac{k_{80 \mathrm{~kg}}}{k_{61 \mathrm{~kg}}}=\frac{1.73\left(\frac{80 \mathrm{~kg}}{70}\right)^{0.73}}{1.73\left(\frac{61 \mathrm{~kg}}{70}\right)^{0.73}}=\left(\frac{80}{61}\right)^{0.73}=1.2
+\)</span>$</p>
+<p>The clearance rate for the 80 kg patient will be <span class="math notranslate nohighlight">\(\mathrm{k}=0.421 / \mathrm{hr}\)</span>.</p>
 </section>
 </section>
 
@@ -626,7 +631,7 @@ J = -D \frac{d C}{d x}
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/04/02/01"
+            path: "./chapters/04/03/01"
         },
         predefinedOutput: true
     }
@@ -644,20 +649,20 @@ J = -D \frac{d C}{d x}
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../ficks_laws.html"
+       href="../Compartment_Practice.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>Fick’s Laws</p>
+        <p class="prev-next-title"><span class="section-number">4.3. </span>Compartmental Model Practice Problems</p>
       </div>
     </a>
     <a class="right-next"
-       href="../02/ficks2.html"
+       href="../02/compartment_model_thyroid.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.2.2. </span>Fick’s Second Law</p>
+        <p class="prev-next-title"><span class="section-number">4.3.2. </span>Compartmental model of iodine transport to the thyroid</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -676,8 +681,8 @@ J = -D \frac{d C}{d x}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flux">4.2.1.1. Flux</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#flux-due-to-random-movement-of-molecules">4.2.1.2. Flux due to random movement of molecules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.1.1. Central compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-initial-dose">4.3.1.2. Required Initial Dose</a></li>
 </ul>
   </nav></div>
 
