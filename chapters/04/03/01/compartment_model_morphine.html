@@ -529,8 +529,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.1.1. Central compartment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-initial-dose">4.3.1.2. Required Initial Dose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-equation">4.3.1.1. Rate Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-correct-initial-dose-of-morphine">4.3.1.2. What is the correct initial dose of morphine?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-should-the-doctor-inject-to-achieve-this-initial-dose">4.3.1.3. How much should the doctor inject to achieve this initial dose?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-constant-varies">4.3.1.4. Rate constant varies</a></li>
 </ul>
             </nav>
         </div>
@@ -544,34 +546,35 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="compartmental-model-of-morphine-metabolism">
 <h1><span class="section-number">4.3.1. </span>Compartmental model of morphine metabolism<a class="headerlink" href="#compartmental-model-of-morphine-metabolism" title="Permalink to this heading">#</a></h1>
-<p>Credit: Terry Johnson</p>
-<p>A 61 kg patient needs enough morphine to relieve their post-surgical pain during sleep (8 hours). How much morphine should be given to the patient before bed so that the concentration of morphine in their system doesn’t drop below the pain-relieving concentration <span class="math notranslate nohighlight">\(8.2 \times 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>?</p>
-<p>The volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> is approximately 1.0 <span class="math notranslate nohighlight">\(\mathrm{kg} / \mathrm{L}\)</span>, or 61 L (for this 61 kg patient).</p>
-<p>This patient’s clearance rate for morphine <span class="math notranslate nohighlight">\(k=0.351 / \mathrm{hr}\)</span>. Below is the one-compartment model describing this system.</p>
-<section id="central-compartment">
-<h2><span class="section-number">4.3.1.1. </span>Central compartment<a class="headerlink" href="#central-compartment" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(V_{d}=61 \mathrm{~L}\)</span> Initial dose <span class="math notranslate nohighlight">\(\mathrm{C}_{0}=\)</span> ?</p>
-<p>The rate of change of morphine concentration in the central compartment would be:
-$<span class="math notranslate nohighlight">\(
+<ul class="simple">
+<li><p>A 61 kg patient needs enough morphine to relieve their post-surgical pain during sleep (8 hours).</p></li>
+<li><p>The volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> is approximately 1.0 <span class="math notranslate nohighlight">\(\mathrm{kg} / \mathrm{L}\)</span>, or 61 L (for this 61 kg patient).</p></li>
+<li><p>This patient’s clearance rate for morphine <span class="math notranslate nohighlight">\(k=0.351 / \mathrm{hr}\)</span>. Below is the one-compartment model describing this system.</p></li>
+</ul>
+<section id="rate-equation">
+<h2><span class="section-number">4.3.1.1. </span>Rate Equation<a class="headerlink" href="#rate-equation" title="Permalink to this heading">#</a></h2>
+<p>How much morphine should be given to the patient before bed so that the concentration of morphine in their system doesn’t drop below the pain-relieving concentration <span class="math notranslate nohighlight">\(8.2 \times 10^{-3} \frac{mg}{L}\)</span>? In other words, find <span class="math notranslate nohighlight">\(\mathrm{C}_{0}\)</span>?</p>
+<p>In a single compartment model rate of change of morphine in the central compartment is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
 \frac{d c}{d t} &amp; =-k c \\
 \frac{d c}{c} &amp; =-k d t
 \end{aligned}
-\)</span>$</p>
+\end{split}\]</div>
 <p>Integrate both sides to get:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{aligned}
 \int \frac{d c}{c} &amp; =-k \int d t \\
-\ln c &amp; =-k t+A
+\ln c &amp; =-k t+A*
 \end{aligned}
 \end{split}\]</div>
-<p>where A is an integration constant. This is equivalent to:</p>
+<p>We can switch out A* for <span class="math notranslate nohighlight">\(\ln A\)</span>, making solving easier. Both are constants.</p>
 <div class="math notranslate nohighlight">
 \[
 \ln c=-k t+\ln A
 \]</div>
-<p>Why can we switch out A for <span class="math notranslate nohighlight">\(\ln A\)</span>? Why did we do that?</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{gathered}
@@ -581,40 +584,56 @@ c(t)=A e^{-k t}
 \end{gathered}
 \end{split}\]</div>
 </section>
-<section id="required-initial-dose">
-<h2><span class="section-number">4.3.1.2. </span>Required Initial Dose<a class="headerlink" href="#required-initial-dose" title="Permalink to this heading">#</a></h2>
-<div class="alert alert-info"> 
-QUESTION: How do we calculate the required initial dose of morphine?
-</div>
+<section id="what-is-the-correct-initial-dose-of-morphine">
+<h2><span class="section-number">4.3.1.2. </span>What is the correct initial dose of morphine?<a class="headerlink" href="#what-is-the-correct-initial-dose-of-morphine" title="Permalink to this heading">#</a></h2>
 <p>We know two things:</p>
 <ul class="simple">
-<li><p>At <span class="math notranslate nohighlight">\(t=0, c(t)\)</span> must be <span class="math notranslate nohighlight">\(c_{0}\)</span> (the initial concentration)</p></li>
-<li><p>At <span class="math notranslate nohighlight">\(t=8\)</span> hours, the concentration can be no less than <span class="math notranslate nohighlight">\(8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>.</p></li>
+<li><p>at time <span class="math notranslate nohighlight">\(t=0, c(t)\)</span> must be <span class="math notranslate nohighlight">\(c_{0}\)</span> (the initial concentration)</p></li>
+<li><p>at <span class="math notranslate nohighlight">\(t=8\)</span> hours, the concentration can be no less than <span class="math notranslate nohighlight">\(8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>.</p></li>
 </ul>
-<p>We use the first to solve for A .
-$<span class="math notranslate nohighlight">\(
+<p>We use the first to solve for A.</p>
+<div class="math notranslate nohighlight">
+\[
 c_{0}=A e^{0}
-\)</span>$</p>
-<p>Which gives us <span class="math notranslate nohighlight">\(\mathrm{A}=c_{0}\)</span> and,
-$<span class="math notranslate nohighlight">\(
+\]</div>
+<p>Which gives us <span class="math notranslate nohighlight">\(\mathrm{A}=c_{0}\)</span> and</p>
+<div class="math notranslate nohighlight">
+\[
 c(t)=c_{0} e^{-k t}
-\)</span>$</p>
+\]</div>
 <p>Now, we solve for a <span class="math notranslate nohighlight">\(C_{0}\)</span> that will give us exactly the effective pain-relieving concentration after 8 hours. At this initial dose, the concentration of morphine will just start to become ineffective as the patient wakes up.</p>
 <div class="math notranslate nohighlight">
 \[
-8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}=c_{0} e^{-(0.35 / h r)(8.0 h r)}
+8.2 \times 10^{-3} \mathrm{mg} / \mathrm{L}=c_{0} e^{-(0.35 / h r)(8.0 h r)}
 \]</div>
-<p>Solving for <span class="math notranslate nohighlight">\(c_{0}\)</span> gives us a concentration of <span class="math notranslate nohighlight">\(0.134846 \ldots \mathrm{mg} / \mathrm{L}\)</span> (accounting for sig figs in the last step).</p>
-<p>To achieve this concentration in the body, one must inject <span class="math notranslate nohighlight">\((0.134846 \ldots \mathrm{mg} / \mathrm{L})(61 \mathrm{~L})\)</span>, or 8.2 mg. In reality, since we’ve made several simplifying assumptions in our compartmental model, I would interpret this as “somewhere around 8 mg.”</p>
-<p>QUESTION: Before giving a patient this dose, what else should we consider?</p>
-<p>The typical dose for morphine is <span class="math notranslate nohighlight">\(10-30 \mathrm{mg}\)</span>. Overdose occurs between 60 mg (hypersensitive) and 200 mg (typical), though it can be much higher for those who have been using morphine regularly.</p>
-<p>QUESTION: An 80 kg patient comes in with the same problem - you’re asked to calculate a minimum effective dose. What do you need to do differently?</p>
-<p>For an 80 kg patient, the volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> will be 80 L .</p>
-<p>If the clearance rate is proportional to the surface area of the patient, then,
-$<span class="math notranslate nohighlight">\(
+<p>Solving for <span class="math notranslate nohighlight">\(c_{0}\)</span> gives us a concentration of <span class="math notranslate nohighlight">\(0.134846 \ldots \mathrm{mg} / \mathrm{L}\)</span> (accounting
+for sig figs in the last step).</p>
+</section>
+<section id="how-much-should-the-doctor-inject-to-achieve-this-initial-dose">
+<h2><span class="section-number">4.3.1.3. </span>How much should the doctor inject to achieve this initial dose?<a class="headerlink" href="#how-much-should-the-doctor-inject-to-achieve-this-initial-dose" title="Permalink to this heading">#</a></h2>
+<p>To achieve this concentration in the body, the doctor needs to inject a specific amount? How much should she inject?</p>
+<p>To estimate this, we should remember that the volume of distribution for morphine is approximately 1.0 kg/L. This volume distribution is a very simple estimation of the volume that the morphine will occupy per mass of the patient.</p>
+<p>For a <span class="math notranslate nohighlight">\(V_d\)</span> of 1 L/kg, a 61kg person, the morphine is distributed in 61L. Therefore, one must inject:</p>
+<div class="math notranslate nohighlight">
+\[
+0.134846 mg/L \times 61 L =  8.2 mg
+\]</div>
+<p>Since we’ve made a number of simplifying assumptions in our compartmental model, we interpret this as “somewhere around 8 mg.”</p>
+</section>
+<section id="rate-constant-varies">
+<h2><span class="section-number">4.3.1.4. </span>Rate constant varies<a class="headerlink" href="#rate-constant-varies" title="Permalink to this heading">#</a></h2>
+<p>An 80 kg patient has the same problem - you’re asked to calculate a minimum effective dose. What do you need to do differently?</p>
+<p>For an 80 kg patient, the volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> will be 80 L. We often assume that the clearance rate is proportional to the patient’s surface area.</p>
+<p>We can estimate the SA from the body weight</p>
+<div class="math notranslate nohighlight">
+\[
+\text{Surface area} = 1.73\left(\frac{\text{Body weight in kg}}{70}\right)^{0.73}
+\]</div>
+<p>If the clearance rate is proportional to the surface area of the patient, then we can estimate k for a different person:</p>
+<div class="math notranslate nohighlight">
+\[
 \frac{k_{80 \mathrm{~kg}}}{k_{61 \mathrm{~kg}}}=\frac{1.73\left(\frac{80 \mathrm{~kg}}{70}\right)^{0.73}}{1.73\left(\frac{61 \mathrm{~kg}}{70}\right)^{0.73}}=\left(\frac{80}{61}\right)^{0.73}=1.2
-\)</span>$</p>
-<p>The clearance rate for the 80 kg patient will be <span class="math notranslate nohighlight">\(\mathrm{k}=0.421 / \mathrm{hr}\)</span>.</p>
+\]</div>
 </section>
 </section>
 
@@ -681,8 +700,10 @@ $<span class="math notranslate nohighlight">\(
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.1.1. Central compartment</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-initial-dose">4.3.1.2. Required Initial Dose</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-equation">4.3.1.1. Rate Equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-correct-initial-dose-of-morphine">4.3.1.2. What is the correct initial dose of morphine?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-much-should-the-doctor-inject-to-achieve-this-initial-dose">4.3.1.3. How much should the doctor inject to achieve this initial dose?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rate-constant-varies">4.3.1.4. Rate constant varies</a></li>
 </ul>
   </nav></div>
 

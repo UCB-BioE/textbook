@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.1. Compartmental model of morphine metabolism &#8212; Introduction to Bioengineering</title>
+    <title>4.1. Introduction to Pharmacokinetic modeling &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -77,8 +77,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="4.2. Fick’s Laws" href="../02/pharmo2.html" />
-    <link rel="prev" title="4. Compartmental Models" href="../Pharmokinetics.html" />
+    <link rel="next" title="4.2. Compartment Models" href="../02/pharmo2.html" />
+    <link rel="prev" title="4. Pharmacokinetics" href="../Pharmokinetics.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -519,7 +519,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Compartmental model of morphine metabolism</h1>
+    <h1>Introduction to Pharmacokinetic modeling</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -529,7 +529,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.1.1. Central compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption">4.1.1. Absorption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">4.1.2. Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metabolism">4.1.3. Metabolism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excretion">4.1.4. Excretion</a></li>
 </ul>
             </nav>
         </div>
@@ -541,129 +544,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="compartmental-model-of-morphine-metabolism">
-<h1><span class="section-number">4.1. </span>Compartmental model of morphine metabolism<a class="headerlink" href="#compartmental-model-of-morphine-metabolism" title="Permalink to this heading">#</a></h1>
-<p>A 61 kg patient needs enough morphine to relieve their post-surgical pain during sleep (8 hours). How much morphine should be given to the patient before bed so that the concentration of morphine in their system doesn’t drop below the pain-relieving concentration <span class="math notranslate nohighlight">\(8.2 \times 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>?</p>
-<p>The volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> is approximately 1.0 <span class="math notranslate nohighlight">\(\mathrm{kg} / \mathrm{L}\)</span>, or 61 L (for this 61 kg patient).</p>
-<p>This patient’s clearance rate for morphine <span class="math notranslate nohighlight">\(k=0.351 / \mathrm{hr}\)</span>. Below is the one-compartment model describing this system.</p>
-<section id="central-compartment">
-<h2><span class="section-number">4.1.1. </span>Central compartment<a class="headerlink" href="#central-compartment" title="Permalink to this heading">#</a></h2>
-<p><span class="math notranslate nohighlight">\(V_{d}=61 \mathrm{~L}\)</span> Initial dose <span class="math notranslate nohighlight">\(\mathrm{C}_{0}=\)</span> ?</p>
-<p>The rate of change of morphine concentration in the central compartment would be:
-$<span class="math notranslate nohighlight">\(
-\begin{aligned}
-\frac{d c}{d t} &amp; =-k c \\
-\frac{d c}{c} &amp; =-k d t
-\end{aligned}
-\)</span>$</p>
-<p>Integrate both sides to get:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{aligned}
-\int \frac{d c}{c} &amp; =-k \int d t \\
-\ln c &amp; =-k t+A
-\end{aligned}
-\end{split}\]</div>
-<p>where A is an integration constant. This is equivalent to:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-pharmacokinetic-modeling">
+<h1><span class="section-number">4.1. </span>Introduction to Pharmacokinetic modeling<a class="headerlink" href="#introduction-to-pharmacokinetic-modeling" title="Permalink to this heading">#</a></h1>
+<p>Pharmacokinetic modeling uses mathematical representations of how a drug moves through and is processed by the body. These models include drug administration, distribution, and elimination and are used to help predict drug behavior.</p>
+<section id="absorption">
+<h2><span class="section-number">4.1.1. </span>Absorption<a class="headerlink" href="#absorption" title="Permalink to this heading">#</a></h2>
+<p>Drugs can enter the body via different routes. They can be taken orally, injected into muscle or blood, or delivered via a patch. The type of delivery will impact how the compound is absorbed and where it travels and is metabolized in the body.</p>
+</section>
+<section id="distribution">
+<h2><span class="section-number">4.1.2. </span>Distribution<a class="headerlink" href="#distribution" title="Permalink to this heading">#</a></h2>
+<p>After absorption, the drug spreads throughout the body’s compartments. However, different drugs will spread <strong>very differently</strong>. For example, some drugs will spread throughput the entire body, while others will be concentrated in specific organs. This is often described using a simple concept called <strong>volume of distribution (Vd)</strong>, which relates the total amount of drug in the body to its concentration in the plasma or blood.</p>
 <div class="math notranslate nohighlight">
 \[
-\ln c=-k t+\ln A
+V_d = \frac{\text{Amount of drug in the body}}{\text{Amount of drug in the plasma}}
 \]</div>
-<p>QUESTION: Why can I switch out A for <span class="math notranslate nohighlight">\(\ln A\)</span>? Why did I?</p>
+<p>The higher the Vd, the more extensively the drug is distributed into tissues.</p>
+</section>
+<section id="metabolism">
+<h2><span class="section-number">4.1.3. </span>Metabolism<a class="headerlink" href="#metabolism" title="Permalink to this heading">#</a></h2>
+<p>Metabolism describes how the drug is chemically altered. Typically this involves transforming it into more water-soluble forms for excretion. Metabolic processes often follow <strong>Michaelis-Menten kinetics</strong>, but in many cases, they are simplified to follow <strong>first-order kinetics</strong>, where the rate of metabolism is proportional to the drug concentration. We will discuss reaction rates in later sections of the course.</p>
+</section>
+<section id="excretion">
+<h2><span class="section-number">4.1.4. </span>Excretion<a class="headerlink" href="#excretion" title="Permalink to this heading">#</a></h2>
+<p>This phase describes how the drug and its metabolites are removed from the body, typically through the kidneys (urine) or liver (bile). <strong>Clearance (CL)</strong> is the primary measure of excretion</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{gathered}
-\ln c-\ln A=-k t \\
-\ln \frac{c}{A}=-k t \\
-c(t)=A e^{-k t}
-\end{gathered}
-\end{split}\]</div>
-<div class="admonition-flick-s-2-text-nd-law admonition">
-<p class="admonition-title">Flick’s <span class="math notranslate nohighlight">\(2^{\text {nd }}\)</span> Law</p>
-<p>QUESTION: How do we calculate the required initial dose of morphine?</p>
-</div>
-<div class="alert alert-info"> 
-<p><strong>QUESTION</strong>  What happens when the Thiele number is very large, or very small?</p>
-</div>
-<p>QUESTION: How do we calculate the required initial dose of morphine?
-We know two things: at time <span class="math notranslate nohighlight">\(t=0, c(t)\)</span> must be <span class="math notranslate nohighlight">\(c_{0}\)</span> (the initial concentration), and, at <span class="math notranslate nohighlight">\(t=8\)</span> hours, the concentration can be no less than <span class="math notranslate nohighlight">\(8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}\)</span>.</p>
-<p>We use the first to solve for A .
-$<span class="math notranslate nohighlight">\(
-c_{0}=A e^{0}
-\)</span>$</p>
-<p>Which gives us <span class="math notranslate nohighlight">\(\mathrm{A}=c_{0}\)</span> and,
-$<span class="math notranslate nohighlight">\(
-c(t)=c_{0} e^{-k t}
-\)</span>$</p>
-<p>Now, we solve for a <span class="math notranslate nohighlight">\(C_{0}\)</span> that will give us exactly the effective pain-relieving concentration after 8 hours. At this initial dose, the concentration of morphine will just start to become ineffective as the patient wakes up.
-$<span class="math notranslate nohighlight">\(
-8.2 \circ 10^{-3} \mathrm{mg} / \mathrm{L}=c_{0} e^{-(0.35 / h r)(8.0 h r)}
-\)</span>$</p>
-<p>Solving for <span class="math notranslate nohighlight">\(c_{0}\)</span> gives us a concentration of <span class="math notranslate nohighlight">\(0.134846 \ldots \mathrm{mg} / \mathrm{L}\)</span> (accounting
-for sig figs in the last step). To achieve this concentration in the body, one must inject <span class="math notranslate nohighlight">\((0.134846 \ldots \mathrm{mg} / \mathrm{L})(61 \mathrm{~L})\)</span>, or 8.2 mg . In reality, since we’ve made a number of simplifying assumptions in our compartmental model, I would interpret this as “somewhere around 8 mg “.</p>
-<p>QUESTION: Before giving a patient this dose, what else should we consider?</p>
-<p>The typical dose for morphine is <span class="math notranslate nohighlight">\(10-30 \mathrm{mg}\)</span>. Overdose occurs between 60 mg (hypersensitive) and 200 mg (typical), though it can be much higher for those who have been using morphine regularly.</p>
-<p>QUESTION: An 80 kg patient comes in with the same problem - you’re asked to calculate a minimum effective dose. What do you need to do differently?</p>
-<p>For an 80 kg patient, the volume of distribution for morphine <span class="math notranslate nohighlight">\(V_{d, \text { morphine }}\)</span> will be 80 L .</p>
-<p>If the clearance rate is proportional to the surface area of the patient, then,
-$<span class="math notranslate nohighlight">\(
-\frac{k_{80 \mathrm{~kg}}}{k_{61 \mathrm{~kg}}}=\frac{1.73\left(\frac{80 \mathrm{~kg}}{70}\right)^{0.73}}{1.73\left(\frac{61 \mathrm{~kg}}{70}\right)^{0.73}}=\left(\frac{80}{61}\right)^{0.73}=1.2
-\)</span>$</p>
-<p>The clearance rate for the 80 kg patient will be <span class="math notranslate nohighlight">\(\mathrm{k}=0.421 / \mathrm{hr}\)</span>.</p>
-<p>\section*{Chapter 2}</p>
-<p>\section*{Compartmental model of iodine transport to the thyroid}</p>
-<p>The thyroid can take up and store iodine. A simple compartmental model of what happens when radioactive iodine is accidentally injested is shown below.</p>
-<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_09_d18d4cecd0b381a9bd9dg-6.jpg?height=312&amp;width=1202&amp;top_left_y=1568&amp;top_left_x=451" /></p>
-<p>QUESTION: What processes are left out of the compartmental model? Why would I leave them out?</p>
-<p>Our compartmental model assumes the following:</p>
-<ul class="simple">
-<li><p>Once ingested, iodine moves quickly through the digestive system into the central compartment</p></li>
-<li><p>The rate of iodine release from the thyroid is slow compared to the rates
-of excretion and transport to the thyroid</p></li>
-<li><p>The volume of distribution is approximately constant.</p></li>
-<li><p>The thyroid doesn’t absorb so much iodine that it becomes “full”</p></li>
-<li><p>Before the ingestion, the thyroid was free of radioactive iodine.</p></li>
-</ul>
-<p>So, keep in mind that our model is not good for “short times” (on the order of minutes) because it assumes that movement from the mouth to the stomach, and from the stomach to the central compartment, are instantaneous. This probably takes a few minutes. The model is also not good for “long times” (on the order of weeks) during which we’d need to take into account iodine release from the thyroid. Our model is probably good for “medium times”, on the order of hours or maybe a few days - which is fine! That’s what we plan on using it for.</p>
-<p>I’m a graduate student working with radioactive Iodine-125. To determine if I’ve been accidentally exposed, after working with the material, I wait an adequate amount of time for the Iodine-125 to end up in my thyroid, and then have my thyroid scanned for radioactivity.</p>
-<p>QUESTION: How long after working with Iodine-125 should I wait to have my thyroid scanned?</p>
-<p>The rate of change of Iodine-125 in the central compartment would be:
-$<span class="math notranslate nohighlight">\(
-\frac{d c}{d t}=-\left(k_{t}+k_{e}\right) c
-\)</span>$</p>
-<p>Solve as before to get <span class="math notranslate nohighlight">\(\mathrm{c}(\mathrm{t})\)</span>, the concentration of iodine in the central compartment:
-$<span class="math notranslate nohighlight">\(
-c(t)=c_{0} e^{-\left(k_{t}+k_{e}\right) t}
-\)</span>$</p>
-<p>QUESTION: How do I get from concentration in the central compartment
-to amount in the thyroid?
-If I is the amount of iodine stored in the thyroid, then:
-$<span class="math notranslate nohighlight">\(
-\frac{d I}{d t}=k_{t} c V_{d}
-\)</span>$</p>
-<p>QUESTION: What is the <span class="math notranslate nohighlight">\(V_{d}\)</span> doing in the equation?
-$<span class="math notranslate nohighlight">\(
-\underbrace{\frac{d I}{d t}}_{\frac{\text { amount }}{\text { time }}}=\underbrace{k_{t}}_{\frac{1}{\text { time }}} \underbrace{c}_{\frac{\text { amount }}{\text { volume }}} \underbrace{V_{d}}_{\text {volume }}
-\)</span>$</p>
-<p>Note that we have an equation for <span class="math notranslate nohighlight">\(\mathrm{c}(\mathrm{t})\)</span>. Plugging it into the equation gives,
-$<span class="math notranslate nohighlight">\(
-\frac{d I}{d t}=k_{t} V_{d} c_{0} e^{-\left(k_{t}+k_{e}\right) t}
-\)</span>$</p>
-<p>Integrating and solving for <span class="math notranslate nohighlight">\(\mathrm{I}(\mathrm{t})\)</span> gives,
-$<span class="math notranslate nohighlight">\(
-I(t)=-\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}} e^{-\left(k_{t}+k_{e}\right) t}+A
-\)</span>$</p>
-<p>QUESTION: How do we solve for A?
-Given that at <span class="math notranslate nohighlight">\(t=0, I(t)=0\)</span>,
-$<span class="math notranslate nohighlight">\(
-0=-\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}+A
-\)</span>$</p>
-<p>Which gives,
-$<span class="math notranslate nohighlight">\(
-I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t}\right)
-\)</span>$</p>
-<p>Let’s say that I receive an initial dosage of 2.0 mCi of Iodine-125. The initial concentration in my central compartment would be <span class="math notranslate nohighlight">\(C_{0}=(2.0 \mathrm{mCi}) /(20 \mathrm{~L})\)</span>. The amount of Iodine-125 in my thyroid would be,</p>
-<p>QUESTION: How long after working with radioactive Iodine-125 should I wait before getting my thyroid checked?</p>
+\[
+CL = k \times V_d
+\]</div>
+<p>Where k is the elimination rate constant, and <span class="math notranslate nohighlight">\(V_d\)</span> is the volume of distribution.</p>
 </section>
 </section>
 
@@ -703,7 +611,7 @@ I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Compartmental Models</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Pharmacokinetics</p>
       </div>
     </a>
     <a class="right-next"
@@ -711,7 +619,7 @@ I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4.2. </span>Fick’s Laws</p>
+        <p class="prev-next-title"><span class="section-number">4.2. </span>Compartment Models</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -730,7 +638,10 @@ I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.1.1. Central compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#absorption">4.1.1. Absorption</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#distribution">4.1.2. Distribution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#metabolism">4.1.3. Metabolism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excretion">4.1.4. Excretion</a></li>
 </ul>
   </nav></div>
 

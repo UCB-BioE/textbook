@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.2. Fick’s Laws &#8212; Introduction to Bioengineering</title>
+    <title>4.2. Compartment Models &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -70,15 +70,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/04/02/pharmo2';</script>
     <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/04/02/pharmo2.html" />
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="4.2.1. Ficks law of diffusion in 1-D" href="01/pharmo2_1.html" />
-    <link rel="prev" title="4.1. Compartmental model of morphine metabolism" href="../01/pharmo_intro.html" />
+    <link rel="prev" title="4.1. Introduction to Pharmacokinetic modeling" href="../01/pharmo_intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -517,7 +515,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Fick’s Laws</h1>
+    <h1>Compartment Models</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -531,26 +529,16 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="ficks-laws">
-<h1><span class="section-number">4.2. </span>Fick’s Laws<a class="headerlink" href="#ficks-laws" title="Permalink to this heading">#</a></h1>
-<p><strong>Fick’s Laws</strong> describe the diffusion process, which is the movement of particles from areas of higher concentration to areas of lower concentration. Fick’s laws provide a mathematical framework for understanding and modeling diffusion in various systems.</p>
-<div class="admonition-flick-s-1-text-st-law admonition">
-<p class="admonition-title">Flick’s <span class="math notranslate nohighlight">\(1^{\text {st}}\)</span> Law</p>
-<p>It relates the diffusion flux to the concentration gradient. It states that the flux “J” (the amount of substance that flows per unit area per unit time) is proportional to the negative gradient of concentration “c”:</p>
-<div class="math notranslate nohighlight">
-\[
-J = -D \frac{\partialc}{\partialx}
-\]</div>
-<p>Where  D is the diffusion coefficient. This law applies to steady-state diffusion, where concentration does not change with time.</p>
+  <section id="compartment-models">
+<h1><span class="section-number">4.2. </span>Compartment Models<a class="headerlink" href="#compartment-models" title="Permalink to this heading">#</a></h1>
+<p>Pharmacokinetic models often divide the body into compartments where drugs are distributed.</p>
+<div class="admonition-one-compartment-model admonition">
+<p class="admonition-title">One compartment model</p>
+<p>The simplest model is the <strong>one-compartment model</strong>, where the drug is assumed to be distributed instantaneously throughout a single, homogenous compartment (the body).</p>
 </div>
-<div class="admonition-flick-s-2-text-nd-law admonition">
-<p class="admonition-title">Flick’s <span class="math notranslate nohighlight">\(2^{\text {nd }}\)</span> Law</p>
-<p>It describes how the concentration of a substance changes over time due to diffusion. It is derived by combining Fick’s First Law with the continuity equation:</p>
-<div class="math notranslate nohighlight">
-\[
-\frac{\partial c}{\partial t} = D \frac{\partial^2 c}{\partial x^2}
-\]</div>
-<p>This law applies to non-steady-state diffusion, where concentration varies with both position and time.</p>
+<div class="admonition-multi-compartment-model admonition">
+<p class="admonition-title">Multi-compartment model</p>
+<p>More complex models use <strong>multi-compartment systems</strong> to represent different tissues or organs, where the drug moves between compartments at different rates.</p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -592,7 +580,7 @@ J = -D \frac{\partialc}{\partialx}
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.1. </span>Compartmental model of morphine metabolism</p>
+        <p class="prev-next-title"><span class="section-number">4.1. </span>Introduction to Pharmacokinetic modeling</p>
       </div>
     </a>
     <a class="right-next"
