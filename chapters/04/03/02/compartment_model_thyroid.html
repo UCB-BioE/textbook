@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>4.3.2. Compartmental model of iodine transport to the thyroid &#8212; Introduction to Bioengineering</title>
+    <title>4.3.2. Iodine Metabolism &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -78,7 +78,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="5. Statistics" href="../../../20/statistics.html" />
-    <link rel="prev" title="4.3.1. Compartmental model of morphine metabolism" href="../01/compartment_model_morphine.html" />
+    <link rel="prev" title="4.3.1. Morphine metabolism" href="../01/compartment_model_morphine.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -240,6 +240,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../Compartment_Practice.html">4.3. Practice problems</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-13"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../01/compartment_model_morphine.html">4.3.1. Morphine Metabolism</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">4.3.2. Iodine Metabolism</a></li>
+
 </ul>
 </li>
 </ul>
@@ -506,7 +507,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -517,11 +520,25 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Compartmental model of iodine transport to the thyroid</h1>
+    <h1>Iodine Metabolism</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.3.2. Iodine Metabolism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.2.1. Central Compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thyroid-compartment">4.3.2.2. Thyroid Compartment</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-long-after-the-accident-should-i-wait-before-getting-my-thyroid-checked-forradioactive-iodine-125">4.3.3. How long after the accident should I wait before getting my thyroid checked forradioactive Iodine-125?</a></li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -531,10 +548,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="compartmental-model-of-iodine-transport-to-the-thyroid">
-<h1><span class="section-number">4.3.2. </span>Compartmental model of iodine transport to the thyroid<a class="headerlink" href="#compartmental-model-of-iodine-transport-to-the-thyroid" title="Permalink to this heading">#</a></h1>
-<p>The thyroid can take up and store iodine. A simple compartmental model of what happens when radioactive iodine is accidentally injested is shown below.</p>
-<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_09_d18d4cecd0b381a9bd9dg-6.jpg?height=312&amp;width=1202&amp;top_left_y=1568&amp;top_left_x=451" /></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="iodine-metabolism">
+<h1><span class="section-number">4.3.2. </span>Iodine Metabolism<a class="headerlink" href="#iodine-metabolism" title="Permalink to this heading">#</a></h1>
+<p>The thyroid can take up and store iodine. I’m a graduate student working with radioactive Iodine-125. To determine if I’ve been accidentally exposed, after working with the material, I wait an adequate amount of time for the Iodine-125 to end up in my thyroid and then have my thyroid scanned for radioactivity. How long after working with Iodine-125 should I wait to have my thyroid scanned?</p>
+<p>A compartmental model of what happens when radioactive iodine is accidentally ingested is shown below.</p>
+<p><img alt="iodine" src="../../../../_images/thyroid.png" /></p>
 <p>QUESTION: What processes are left out of the compartmental model? Why would I leave them out?</p>
 <p>Our compartmental model assumes the following:</p>
 <ul class="simple">
@@ -545,9 +563,10 @@ of excretion and transport to the thyroid</p></li>
 <li><p>The thyroid doesn’t absorb so much iodine that it becomes “full”</p></li>
 <li><p>Before the ingestion, the thyroid was free of radioactive iodine.</p></li>
 </ul>
-<p>So, keep in mind that our model is not good for “short times” (on the order of minutes) because it assumes that movement from the mouth to the stomach, and from the stomach to the central compartment, are instantaneous. This probably takes a few minutes. The model is also not good for “long times” (on the order of weeks) during which we’d need to take into account iodine release from the thyroid. Our model is probably good for “medium times”, on the order of hours or maybe a few days - which is fine! That’s what we plan on using it for.</p>
-<p>I’m a graduate student working with radioactive Iodine-125. To determine if I’ve been accidentally exposed, after working with the material, I wait an adequate amount of time for the Iodine-125 to end up in my thyroid, and then have my thyroid scanned for radioactivity.</p>
-<p>QUESTION: How long after working with Iodine-125 should I wait to have my thyroid scanned?</p>
+<div class="alert alert-success">
+Our model is not good for "short times" (on the order of minutes) because it assumes that movement from the mouth to the stomach and from the stomach to the central compartment is instantaneous. This takes a few minutes. The model is also not good for "long times" (on the order of weeks), during which we'd need to consider iodine release from the thyroid. Our model is probably good for "medium times," on the order of hours or maybe a few days - which is fine! That's what we plan on using it for.
+</div><section id="central-compartment">
+<h2><span class="section-number">4.3.2.1. </span>Central Compartment<a class="headerlink" href="#central-compartment" title="Permalink to this heading">#</a></h2>
 <p>The rate of change of Iodine-125 in the central compartment would be:
 $<span class="math notranslate nohighlight">\(
 \frac{d c}{d t}=-\left(k_{t}+k_{e}\right) c
@@ -556,36 +575,88 @@ $<span class="math notranslate nohighlight">\(
 $<span class="math notranslate nohighlight">\(
 c(t)=c_{0} e^{-\left(k_{t}+k_{e}\right) t}
 \)</span>$</p>
-<p>QUESTION: How do I get from concentration in the central compartment
-to amount in the thyroid?
-If I is the amount of iodine stored in the thyroid, then:
+</section>
+<section id="thyroid-compartment">
+<h2><span class="section-number">4.3.2.2. </span>Thyroid Compartment<a class="headerlink" href="#thyroid-compartment" title="Permalink to this heading">#</a></h2>
+<p>If I is the amount of iodine stored in the thyroid, then:
 $<span class="math notranslate nohighlight">\(
-\frac{d I}{d t}=k_{t} c V_{d}
+\frac{d I}{d t}=k_{t} c
 \)</span>$</p>
-<p>QUESTION: What is the <span class="math notranslate nohighlight">\(V_{d}\)</span> doing in the equation?
-$<span class="math notranslate nohighlight">\(
-\underbrace{\frac{d I}{d t}}_{\frac{\text { amount }}{\text { time }}}=\underbrace{k_{t}}_{\frac{1}{\text { time }}} \underbrace{c}_{\frac{\text { amount }}{\text { volume }}} \underbrace{V_{d}}_{\text {volume }}
-\)</span>$</p>
+<div class="math notranslate nohighlight">
+\[
+\underbrace{\frac{d I}{d t}}_{\frac{\text { amount }}{\text { time }}}=\underbrace{k_{t}}_{\frac{1}{\text { time }}} \underbrace{c}_{\frac{\text { amount }}{\text { volume }}}
+\]</div>
 <p>Note that we have an equation for <span class="math notranslate nohighlight">\(\mathrm{c}(\mathrm{t})\)</span>. Plugging it into the equation gives,
 $<span class="math notranslate nohighlight">\(
 \frac{d I}{d t}=k_{t} V_{d} c_{0} e^{-\left(k_{t}+k_{e}\right) t}
 \)</span>$</p>
 <p>Integrating and solving for <span class="math notranslate nohighlight">\(\mathrm{I}(\mathrm{t})\)</span> gives,
 $<span class="math notranslate nohighlight">\(
-I(t)=-\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}} e^{-\left(k_{t}+k_{e}\right) t}+A
+I(t)=-\frac{k_{t}c_{0}}{k_{e}+k_{t}} e^{-\left(k_{t}+k_{e}\right) t}+A
 \)</span>$</p>
-<p>QUESTION: How do we solve for A?
-Given that at <span class="math notranslate nohighlight">\(t=0, I(t)=0\)</span>,
-$<span class="math notranslate nohighlight">\(
-0=-\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}+A
-\)</span>$</p>
+<p>We need boundary conditions to solve for A:</p>
+<ul class="simple">
+<li><p>At <span class="math notranslate nohighlight">\(t=0, I(t)=0\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+0=-\frac{k_{t}c_{0}}{k_{e}+k_{t}}+A
+\]</div>
 <p>Which gives,
 $<span class="math notranslate nohighlight">\(
-I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t}\right)
+I(t)=\frac{k_{t}c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t}\right)
 \)</span>$</p>
-<p>Let’s say that I receive an initial dosage of 2.0 mCi of Iodine-125. The initial concentration in my central compartment would be <span class="math notranslate nohighlight">\(C_{0}=(2.0 \mathrm{mCi}) /(20 \mathrm{~L})\)</span>. The amount of Iodine-125 in my thyroid would be,</p>
-<p><img alt="" src="https://cdn.mathpix.com/cropped/2024_09_09_d18d4cecd0b381a9bd9dg-9.jpg?height=527&amp;width=1202&amp;top_left_y=1284&amp;top_left_x=451" /></p>
-<p>QUESTION: How long after working with radioactive Iodine-125 should I wait before getting my thyroid checked?</p>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-long-after-the-accident-should-i-wait-before-getting-my-thyroid-checked-forradioactive-iodine-125">
+<h1><span class="section-number">4.3.3. </span>How long after the accident should I wait before getting my thyroid checked forradioactive Iodine-125?<a class="headerlink" href="#how-long-after-the-accident-should-i-wait-before-getting-my-thyroid-checked-forradioactive-iodine-125" title="Permalink to this heading">#</a></h1>
+<p>Let’s say I receive an initial dosage of 2.0 mCi of Iodine-125. The initial concentration in my central compartment would be <span class="math notranslate nohighlight">\(C_{0}=(2.0 \mathrm{mCi}) /(20 \mathrm{~L})\)</span>. The amount of Iodine-125 in my thyroid would be:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Define the function for I(t)</span>
+<span class="k">def</span> <span class="nf">I_t</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k_t</span><span class="p">,</span> <span class="n">k_e</span><span class="p">,</span> <span class="n">c_0</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">k_t</span> <span class="o">*</span> <span class="n">c_0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">k_e</span> <span class="o">+</span> <span class="n">k_t</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">k_t</span> <span class="o">+</span> <span class="n">k_e</span><span class="p">)</span> <span class="o">*</span> <span class="n">t</span><span class="p">))</span>
+
+<span class="c1"># Parameters</span>
+<span class="n">k_t</span> <span class="o">=</span> <span class="mf">0.5</span>   <span class="c1"># transfer rate constant 1/hr</span>
+<span class="n">k_e</span> <span class="o">=</span> <span class="mf">0.1</span>   <span class="c1"># elimination rate constant 1/hr</span>
+<span class="n">c_0</span> <span class="o">=</span> <span class="mi">2</span><span class="o">/</span><span class="mi">20</span>   <span class="c1"># initial concentration</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># time points from 0 to 10</span>
+
+<span class="c1"># Calculate I(t)</span>
+<span class="n">I_values</span> <span class="o">=</span> <span class="n">I_t</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">k_t</span><span class="p">,</span> <span class="n">k_e</span><span class="p">,</span> <span class="n">c_0</span><span class="p">)</span>
+
+<span class="c1"># Plot the graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">I_values</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$I(t)=\frac{k_</span><span class="si">{t}</span><span class="s1">c_</span><span class="si">{0}</span><span class="s1">}{k_</span><span class="si">{e}</span><span class="s1">+k_</span><span class="si">{t}</span><span class="s1">}(1 - e^{-(k_</span><span class="si">{t}</span><span class="s1">+k_</span><span class="si">{e}</span><span class="s1">) t})$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">c_0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$c_0$&#39;</span><span class="p">)</span>  <span class="c1"># Add a line at c_0</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Time (hrs)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;I(t)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Drug Concentration vs. Time&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/fd15324fa6fccc71a71010f7708460ae8f0d821722ae0f7676e56b1940edf0e0.png" src="../../../../_images/fd15324fa6fccc71a71010f7708460ae8f0d821722ae0f7676e56b1940edf0e0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">2</span><span class="o">/</span><span class="mi">20</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.1
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -624,7 +695,7 @@ I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4.3.1. </span>Compartmental model of morphine metabolism</p>
+        <p class="prev-next-title"><span class="section-number">4.3.1. </span>Morphine metabolism</p>
       </div>
     </a>
     <a class="right-next"
@@ -642,6 +713,26 @@ I(t)=\frac{k_{t} V_{d} c_{0}}{k_{e}+k_{t}}\left(1-e^{-\left(k_{t}+k_{e}\right) t
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">4.3.2. Iodine Metabolism</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#central-compartment">4.3.2.1. Central Compartment</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#thyroid-compartment">4.3.2.2. Thyroid Compartment</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#how-long-after-the-accident-should-i-wait-before-getting-my-thyroid-checked-forradioactive-iodine-125">4.3.3. How long after the accident should I wait before getting my thyroid checked forradioactive Iodine-125?</a></li>
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
