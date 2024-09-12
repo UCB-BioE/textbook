@@ -2,9 +2,10 @@
 
 1st Edition by [Iain Clark](https://bioeng.berkeley.edu/faculty/iain-clark)
 
-This text was originally developed for the UC Berkeley course [BioE 10: Introduction to Biomedicine for Engineers][bioe10].
+This text was developed for the UC Berkeley course [BioE 10: Introduction to Biomedicine for Engineers][bioe10]. Material was adapted from various sources, including: 
 
-Some sections related to computation have been used or adapted from UC Berkeley's Data8 course: https://inferentialthinking.com/chapters/intro.html
+ - Terry Johnson, a teaching Professor, now at the University of Chicago 
+ - UC Berkeley's Data8 course: https://inferentialthinking.com/chapters/intro.html
 
 You can [view the source][source] online.
 
