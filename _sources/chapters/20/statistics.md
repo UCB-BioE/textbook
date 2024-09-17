@@ -1,4 +1,0 @@
-Statistics
-====================
-
-Statistics intro here
