@@ -56,4 +56,5 @@ repository:
 sphinx:
   config:
     html_extra_path: ['assets']
-
+  extra_extensions:
+    - sphinx_proof

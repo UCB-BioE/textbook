@@ -116,13 +116,25 @@ sections:
   sections:
   - file: chapters/05/01/Data_types
     title: Data Types
-  - file: chapters/05/02/Histograms_PDFs
-    title: Histograms
-  - file: chapters/05/03/Mean_Var
+  - file: chapters/05/02/Mean_Var
     title: Summary Statistics
-  - file: chapters/05/04/CLT
+  - file: chapters/05/03/Histograms
+    title: Histograms
+  - file: chapters/05/04/Distributions_PDFs
+    title: Distributions, Probability Density
+  - file: chapters/05/05/LLN
+    title: Law of Large Numbers
+  - file: chapters/05/06/CLT
     title: Central Limit Theorem
-  - file: chapters/05/05/Normal_distribution
-    title: Normal distribution
-  - file: chapters/05/06/z_test
-    title: Z distribution
+  - file: chapters/05/07/HypothesisTesting
+    title: Hypothesis Testing
+  - file: chapters/05/08/z_test
+    title: Z Distribution and z-tests
+  - file: chapters/05/09/t_test
+    title: T Distribution and t-tests
+  - file: chapters/05/10/Error
+    title: Type 1 & 2 Error, Power
+  - file: chapters/05/11/Chisquared
+    title: Chi-squared Goodness of Fit
+  - file: chapters/05/12/ExperimentalDesign
+    title: ExperimentalDesign
