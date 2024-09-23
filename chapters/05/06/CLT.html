@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5.20. The sample mean &#8212; Introduction to Bioengineering</title>
+    <title>5.24. Population &#8212; Introduction to Bioengineering</title>
   
   
   
@@ -35,6 +35,7 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/book.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
   
@@ -72,13 +73,13 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../../../_static/sphinx-thebe.js"></script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05/04/CLT';</script>
-    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/05/04/CLT.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/05/06/CLT';</script>
+    <link rel="canonical" href="https://github.com/bioe10/textbook/tree/gh-pages/chapters/05/06/CLT.html" />
     <link rel="shortcut icon" href="../../../_static/logo.png"/>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="5.23. Normal distribution" href="../05/Normal_distribution.html" />
-    <link rel="prev" title="5.19. Populations and samples" href="../03/Mean_Var.html" />
+    <link rel="next" title="5.28. Hypothesis testing" href="../07/HypothesisTesting.html" />
+    <link rel="prev" title="5.22. Law of Large Numbers" href="../05/LLN.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -245,15 +246,24 @@ const thebe_selector_output = ".output, .cell_output"
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../statistics.html">5. Statistics</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-14"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../01/Data_types.html">5.15. Data Types</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../02/Histograms_PDFs.html">5.16. Example 1: Rolling 2 dice</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../02/Mean_Var.html">5.16. Summary Statistics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../03/Histograms.html">5.17. Histograms</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../03/Mean_Var.html">5.19. Summary Statistics</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.20. The sample mean</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../04/Distributions_PDFs.html">5.21. Distributions, Probability Density</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../05/LLN.html">5.22. Law of Large Numbers</a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">5.24. Population</a></li>
 
 
-<li class="toctree-l2"><a class="reference internal" href="../05/Normal_distribution.html">5.23. Normal distribution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../06/z_test.html">5.24. Z distribution</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../07/HypothesisTesting.html">5.28. Hypothesis Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../08/z_test.html">5.29. Z Distribution and Z-tests</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../09/t_test.html">5.31. T Distribution and t-tests</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../11/Chisquared.html">5.32. Chi-squared Goodness of Fit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../12/ExperimentalDesign.html">5.33. ExperimentalDesign</a></li>
 </ul>
 </li>
 </ul>
@@ -310,7 +320,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/05/04/CLT.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/bioe10/textbook/main?urlpath=lab/tree/chapters/05/06/CLT.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -328,7 +338,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/05/04/CLT.ipynb&branch=main" target="_blank"
+      <li><a href="https://datahub.berkeley.edu/hub/user-redirect/git-pull?repo=https%3A//github.com/bioe10/textbook&urlpath=lab/tree/textbook/chapters/05/06/CLT.ipynb&branch=main" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onJupyterHub"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -374,7 +384,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../../_sources/chapters/05/04/CLT.ipynb" target="_blank"
+      <li><a href="../../../_sources/chapters/05/06/CLT.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -456,7 +466,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>The sample mean</h1>
+    <h1>Population</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -466,9 +476,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.20. The sample mean</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-n-increases-the-distribution-starts-to-look-more-and-more-like-the-normal-distribution">5.21. As n increases, the distribution starts to look more and more like the normal distribution</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-we-sample-the-mean-more-and-more-the-distribution-of-the-sample-mean-has-smaller-and-smaller-variance">5.22. As we sample the mean more and more, the distribution of the sample mean has smaller and smaller variance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.24. Population</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sample-mean">5.25. The sample mean</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-distribution-of-bar-x">5.26. What is the distribution of <span class="math notranslate nohighlight">\(\bar{X}\)</span>?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-sample-size-lots-of-repeats">5.26.1. Small sample size, lots of repeats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-sample-size">5.26.2. Large sample size</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-the-clt">5.27. Summary of the CLT</a></li>
 </ul>
 
             </nav>
@@ -481,52 +496,41 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
-<span class="n">path_data</span> <span class="o">=</span> <span class="s1">&#39;../../../assets/data/&#39;</span>
-</pre></div>
-</div>
-</div>
-</div>
+  <p>#Central Limit Theorem</p>
+<p>The central limit theorem is one of the most important results in statistics.  It states that, under certain conditions, the distribution of the sample mean of a large number of independent random variables approaches a normal distribution, regardless of the shape of the original population distribution.</p>
+<p>To understand this, let’s look at what happens when we compute the average of a sample taken from a population distribution.</p>
+<section id="population">
+<h1><span class="section-number">5.24. </span>Population<a class="headerlink" href="#population" title="Permalink to this heading">#</a></h1>
+<p>Let’s begin with the same distribution used to understand the law of large numbers (LLN)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">geom_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path_data</span> <span class="o">+</span> <span class="s1">&#39;geometric_distribution_data.xlsx&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load packages</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Plotting the data</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># read in data </span>
+<span class="n">path_data</span> <span class="o">=</span> <span class="s1">&#39;../../../assets/data/&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="n">path_data</span> <span class="o">+</span> <span class="s1">&#39;event_count_bimodal_distribution.xlsx&#39;</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span>
+
+<span class="c1"># Plot the histogram</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histogram of Event Count&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Event Count&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Not normal Distribution Data&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frequency&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/d9ab258f9035df0879c37c287447a3c37ab2dee0d1633ab0a19878d12ccf4db3.png" src="../../../_images/d9ab258f9035df0879c37c287447a3c37ab2dee0d1633ab0a19878d12ccf4db3.png" />
+<img alt="../../../_images/ae8ca043db47e7e4db461e4d8ec06344d25a844634641366938abd72c69c59b1.png" src="../../../_images/ae8ca043db47e7e4db461e4d8ec06344d25a844634641366938abd72c69c59b1.png" />
 </div>
 </div>
+</section>
 <section id="the-sample-mean">
-<h1><span class="section-number">5.20. </span>The sample mean<a class="headerlink" href="#the-sample-mean" title="Permalink to this heading">#</a></h1>
-<p>Let’s say we take a sample of size n=5, and we take the mean.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample</span> <span class="o">=</span> <span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="n">sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4.4
-</pre></div>
-</div>
-</div>
-</div>
-<p>Let’s repeat this process <em><strong>10 times</strong></em> (sample size n=5 each time), get many different means, and plot these means.</p>
+<h1><span class="section-number">5.25. </span>The sample mean<a class="headerlink" href="#the-sample-mean" title="Permalink to this heading">#</a></h1>
+<p>Let’s say we take a sample of size n=5, and we take the average (mean). Now, let’s repeat the calculation of our average many times (sample size n=5 each time). We get many different means that we can plot. Notice that they are very different.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the sample size and number of repetitions</span>
@@ -534,144 +538,143 @@ document.write(`
 <span class="n">num_repeats</span> <span class="o">=</span> <span class="mi">10</span>
 
 <span class="c1"># Set up the plot</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
 
 <span class="c1"># Perform sampling with the fixed sample size and the given number of repetitions</span>
 <span class="n">sample_means</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_repeats</span><span class="p">):</span>
-    <span class="n">sample</span> <span class="o">=</span> <span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_size</span><span class="p">)</span>
+    <span class="n">sample</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_size</span><span class="p">)</span>
     <span class="n">sample_mean</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
     <span class="n">sample_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_mean</span><span class="p">)</span>
 
 <span class="c1"># Plotting the distribution of sample means</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Repeats = </span><span class="si">{</span><span class="n">num_repeats</span><span class="si">}</span><span class="s1">, Sample Size = </span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Means, Repeats = </span><span class="si">{</span><span class="n">num_repeats</span><span class="si">}</span><span class="s1">, Sample Size = </span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Events&#39;</span><span class="p">)</span>
 <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Distribution of Sample Means (Geometric Data)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/50ecf48663967a8fed56c68690fa034e03c2e9be76539c2cf3c8b3753c6b1abe.png" src="../../../_images/50ecf48663967a8fed56c68690fa034e03c2e9be76539c2cf3c8b3753c6b1abe.png" />
+<img alt="../../../_images/d90275d61ba066865881f649a24928a57b68a57afde6eeb04abd560d135f3725.png" src="../../../_images/d90275d61ba066865881f649a24928a57b68a57afde6eeb04abd560d135f3725.png" />
 </div>
 </div>
 </section>
-<section id="as-n-increases-the-distribution-starts-to-look-more-and-more-like-the-normal-distribution">
-<h1><span class="section-number">5.21. </span>As n increases, the distribution starts to look more and more like the normal distribution<a class="headerlink" href="#as-n-increases-the-distribution-starts-to-look-more-and-more-like-the-normal-distribution" title="Permalink to this heading">#</a></h1>
+<section id="what-is-the-distribution-of-bar-x">
+<h1><span class="section-number">5.26. </span>What is the distribution of <span class="math notranslate nohighlight">\(\bar{X}\)</span>?<a class="headerlink" href="#what-is-the-distribution-of-bar-x" title="Permalink to this heading">#</a></h1>
+<section id="small-sample-size-lots-of-repeats">
+<h2><span class="section-number">5.26.1. </span>Small sample size, lots of repeats<a class="headerlink" href="#small-sample-size-lots-of-repeats" title="Permalink to this heading">#</a></h2>
+<p>Let’s consider what happens when we compute the means many times. For a sample size of 5, we calculate the mean 10, 100, and 1000 times. The more we calculate this, the more the distribution looks normal. However, we have to calculate the mean <strong>a lot</strong> at n=5.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># What happens when we take a lot of sample means? </span>
-<span class="n">sample_size</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">num_repeats</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">,</span> <span class="mi">100000</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sample_size</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num_repeats</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">]</span>
 
-<span class="c1"># Set up the plot with subplots in one row</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">num_repeats</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Adjust the number of rows and columns to fit all subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Perform sampling with the fixed sample size and varying repetitions</span>
 <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">repeat</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">num_repeats</span><span class="p">):</span>
     <span class="n">sample_means</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">repeat</span><span class="p">):</span>
-        <span class="n">sample</span> <span class="o">=</span> <span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_size</span><span class="p">)</span>
+        <span class="n">sample</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Sample with replacement</span>
         <span class="n">sample_mean</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
         <span class="n">sample_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_mean</span><span class="p">)</span>
     
-    <span class="c1"># Plotting the distribution of sample means</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Repeats = </span><span class="si">{</span><span class="n">repeat</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+    <span class="c1"># Determine the position in the grid</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">j</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">j</span> <span class="o">%</span> <span class="mi">2</span>
     
-    <span class="c1"># Autoscale y-axis for each subplot</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+    <span class="c1"># Plotting the distribution of sample means</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Repeats = </span><span class="si">{</span><span class="n">repeat</span><span class="si">}</span><span class="s1">, n=</span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
+
+<span class="c1"># Hide any unused subplots</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">axes</span><span class="o">.</span><span class="n">size</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">delaxes</span><span class="p">(</span><span class="n">axes</span><span class="o">.</span><span class="n">flatten</span><span class="p">()[</span><span class="n">i</span><span class="p">])</span>
 
 <span class="c1"># Set the overall title for the figure</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribution of Sample Means (Sample Size = </span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">) with Varying Repeats&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.05</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Distribution of Sample Means (Sample Size = </span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">) with Varying Repeats&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/3431c895566a48df8df6f0ef5bbcbf3ed50cca01b372bef82f8763fd8d7a7791.png" src="../../../_images/3431c895566a48df8df6f0ef5bbcbf3ed50cca01b372bef82f8763fd8d7a7791.png" />
+<img alt="../../../_images/bc56a886b9d7b7ce326a8dc2e4f01d180da242fce9954c3c0de2dd73ce732127.png" src="../../../_images/bc56a886b9d7b7ce326a8dc2e4f01d180da242fce9954c3c0de2dd73ce732127.png" />
 </div>
 </div>
 </section>
-<section id="as-we-sample-the-mean-more-and-more-the-distribution-of-the-sample-mean-has-smaller-and-smaller-variance">
-<h1><span class="section-number">5.22. </span>As we sample the mean more and more, the distribution of the sample mean has smaller and smaller variance<a class="headerlink" href="#as-we-sample-the-mean-more-and-more-the-distribution-of-the-sample-mean-has-smaller-and-smaller-variance" title="Permalink to this heading">#</a></h1>
+<section id="large-sample-size">
+<h2><span class="section-number">5.26.2. </span>Large sample size<a class="headerlink" href="#large-sample-size" title="Permalink to this heading">#</a></h2>
+<p>Now consider what happens when we increase the sample size (n). We notice two things: the larger our sample size (n), the more normal the distribution, and the smaller the variance. This is a very important result.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the sample sizes and fixed number of repetitions</span>
-<span class="n">sample_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="mi">1000</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vary the sample size with a fixed number of repeats</span>
+<span class="n">sample_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">]</span>
 <span class="n">num_repeats</span> <span class="o">=</span> <span class="mi">1000</span>
 
-<span class="c1"># Set up the plot with subplots in a single row</span>
-<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sample_sizes</span><span class="p">),</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">24</span><span class="p">,</span> <span class="mi">6</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Adjust the number of rows and columns to fit all subplots</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span> <span class="n">sharex</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Perform sampling with varying sample sizes and a fixed number of repetitions</span>
-<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">size</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_sizes</span><span class="p">):</span>
+<span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">sample_size</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sample_sizes</span><span class="p">):</span>
     <span class="n">sample_means</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_repeats</span><span class="p">):</span>
-        <span class="n">sample</span> <span class="o">=</span> <span class="n">geom_data</span><span class="p">[</span><span class="s1">&#39;Event_Count&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+        <span class="n">sample</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">sample_size</span><span class="p">,</span> <span class="n">replace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># Sample with replacement</span>
         <span class="n">sample_mean</span> <span class="o">=</span> <span class="n">sample</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
         <span class="n">sample_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sample_mean</span><span class="p">)</span>
     
-    <span class="c1"># Plotting the distribution of sample means</span>
-    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sample Size = </span><span class="si">{</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Density&#39;</span><span class="p">)</span>
+    <span class="c1"># Determine the position in the grid</span>
+    <span class="n">row</span> <span class="o">=</span> <span class="n">j</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">col</span> <span class="o">=</span> <span class="n">j</span> <span class="o">%</span> <span class="mi">2</span>
     
-    <span class="c1"># Set the x-axis limits to focus around the mean</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">)</span>
-    <span class="n">ax</span><span class="o">.</span><span class="n">autoscale</span><span class="p">(</span><span class="n">enable</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>  <span class="c1"># Autoscale the y-axis for each graph</span>
+    <span class="c1"># Plotting the distribution of sample means</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">row</span><span class="p">,</span> <span class="n">col</span><span class="p">]</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">sample_means</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span> <span class="n">density</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Sample Size = </span><span class="si">{</span><span class="n">sample_size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;Sample Mean&#39;</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Count&#39;</span><span class="p">)</span>
 
 <span class="c1"># Set the overall title for the figure</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Distribution of Sample Means with Varying Sample Sizes (Repetitions = 1000)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Distribution of Sample Means with Varying Sample Sizes (Repeats = 1000)&#39;</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mf">1.02</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../../_images/ff2c27904dd1e324e34ee5ca5c4bb380c6b6a447f041f59d2df4db160d4596fb.png" src="../../../_images/ff2c27904dd1e324e34ee5ca5c4bb380c6b6a447f041f59d2df4db160d4596fb.png" />
+<img alt="../../../_images/8c97e93dbb01b96c45bebb5d083da4a62dc6cfd3c8a5265fd884ba62a60d4b0b.png" src="../../../_images/8c97e93dbb01b96c45bebb5d083da4a62dc6cfd3c8a5265fd884ba62a60d4b0b.png" />
 </div>
 </div>
-<p>The Central Limit Theorem tells us that as <span class="math notranslate nohighlight">\(n  \rightarrow large\)</span> the <span class="math notranslate nohighlight">\(\mu_{\bar{X}}  \rightarrow \mu\)</span> and as the number of means taken is increased, the variance decreases. This reduces to a remarkable result: the the sampling distribution of the sample mean <span class="math notranslate nohighlight">\( \bar{X} \)</span> approaches a normal distribution as the sample size <span class="math notranslate nohighlight">\( n \)</span> becomes large:</p>
+</section>
+</section>
+<section id="summary-of-the-clt">
+<h1><span class="section-number">5.27. </span>Summary of the CLT<a class="headerlink" href="#summary-of-the-clt" title="Permalink to this heading">#</a></h1>
+<p>We’ve now seen that the Central Limit Theorem (CLT) in action. It gives us a remarkable result that is used througout all of statistics.</p>
+<p><strong>Distribution of Sample Means</strong>
+The sampling distribution of the sample mean <span class="math notranslate nohighlight">\( \bar{X} \)</span> approaches a normal distribution as the sample size <span class="math notranslate nohighlight">\( n \)</span> becomes large:</p>
 <div class="math notranslate nohighlight">
 \[
    \bar{X} \sim N\left( \mu, \frac{\sigma^2}{n} \right)
 \]</div>
-<p><strong>Mean of the Sampling Distribution:</strong></p>
+<p><strong>Mean of the Sampling Distribution:</strong>
+The mean of the sample means will be equal to the population mean</p>
 <div class="math notranslate nohighlight">
 \[
    \mu_{\bar{X}} = \mu
 \]</div>
-<p><strong>Standard Deviation of the Sampling Distribution (Standard Error):</strong></p>
+<p><strong>Standard Deviation of the Sampling Distribution (Standard Error):</strong>
+The standard deviation of the sample means (known as the standard error) will be the population standard deviation (σ) divided by the square root of the sample size (n)</p>
 <div class="math notranslate nohighlight">
 \[
    \sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}}
 \]</div>
-<p><strong>Variance of the Sampling Distribution:</strong></p>
-<div class="math notranslate nohighlight">
-\[
-   \sigma_{\bar{X}}^2 = \frac{\sigma^2}{n}
-\]</div>
-<ul class="simple">
-<li></li>
-</ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="n">but</span> <span class="n">what</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">normal</span> <span class="n">distribution</span> <span class="ow">and</span> <span class="n">why</span> <span class="n">it</span> <span class="ow">is</span> <span class="n">so</span> important<span class="o">?</span> 
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -687,7 +690,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./chapters/05/04"
+            path: "./chapters/05/06"
         },
         predefinedOutput: true
     }
@@ -705,20 +708,20 @@ document.write(`
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../03/Mean_Var.html"
+       href="../05/LLN.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">5.19. </span>Populations and samples</p>
+        <p class="prev-next-title"><span class="section-number">5.22. </span>Law of Large Numbers</p>
       </div>
     </a>
     <a class="right-next"
-       href="../05/Normal_distribution.html"
+       href="../07/HypothesisTesting.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5.23. </span>Normal distribution</p>
+        <p class="prev-next-title"><span class="section-number">5.28. </span>Hypothesis testing</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -737,9 +740,14 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.20. The sample mean</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-n-increases-the-distribution-starts-to-look-more-and-more-like-the-normal-distribution">5.21. As n increases, the distribution starts to look more and more like the normal distribution</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#as-we-sample-the-mean-more-and-more-the-distribution-of-the-sample-mean-has-smaller-and-smaller-variance">5.22. As we sample the mean more and more, the distribution of the sample mean has smaller and smaller variance</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">5.24. Population</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#the-sample-mean">5.25. The sample mean</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-the-distribution-of-bar-x">5.26. What is the distribution of <span class="math notranslate nohighlight">\(\bar{X}\)</span>?</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#small-sample-size-lots-of-repeats">5.26.1. Small sample size, lots of repeats</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-sample-size">5.26.2. Large sample size</a></li>
+</ul>
+</li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#summary-of-the-clt">5.27. Summary of the CLT</a></li>
 </ul>
 
   </nav></div>
