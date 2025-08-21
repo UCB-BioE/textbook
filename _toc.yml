@@ -76,8 +76,8 @@ sections:
     - file: chapters/02/8/3/Overlaid_Graphs
       title: Overlaid Graphs
  
-- file: chapters/03/Diffusion
-  title: Diffusion
+- file: chapters/03/ArtificialSkin
+  title: Artificial Skin
   sections:
   - file: chapters/03/01/random_walk
     title: A Random Walk

@@ -8,11 +8,5 @@ This text was developed for the UC Berkeley course [BioE 10: Introduction to Bio
  - UC Berkeley's Data8 course: https://inferentialthinking.com/chapters/intro.html
  - Generative AI was used 
 
-You can [view the source][source] online.
-
-[bioe10]: https://ucb-bioe.github.io/textbook/chapters/intro.html
-[ghpages]: https://ucb-bioe.github.io/textbook/tree/gh-pages
-[source]: https://ucb-bioe.github.io/textbook/
-
 The contents of this book are licensed for free consumption under the following license:
 [Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)](https://creativecommons.org/licenses/by-nc-nd/4.0/).
